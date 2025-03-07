@@ -6,7 +6,7 @@ Pasos para trabajar en modo de desarrollo:
 4. click derecho en el icono de aplicación web y luego dar en clean and build
 5. deberiamos obtener una salida como la siguiente:
 
-´´
+```
 ------------------< com.fiduciaria.microapp:microapp >------------------
 Building BBVA - MICRO APLICACION 1.1.0.3
   from pom.xml
@@ -51,4 +51,4 @@ Total time:  23.954 s
 Finished at: 2025-03-07T14:29:50-05:00
 ------------------------------------------------------------------------
 
-´´
+```
