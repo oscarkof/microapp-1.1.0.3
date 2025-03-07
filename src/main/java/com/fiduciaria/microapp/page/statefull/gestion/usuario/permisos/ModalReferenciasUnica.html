@@ -1,0 +1,70 @@
+<wicket:panel>
+    <div class="pf-c-modal-box pf-m-md" role="dialog" style="max-height: calc(100vh - 180px);" >
+        <button class="pf-c-button pf-m-plain"
+                wicket:id="cerrarModal" type="button" aria-label="Cerrar">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <header class="pf-c-modal-box__header">
+            <h1 class="pf-c-modal-box__title" id="modal-title">Listado de referencias &uacute;nicas</h1>
+        </header>
+
+        <div class="pf-c-modal-box__body"> 
+            <form wicket:id="formCheckGroup">
+                <span wicket:id="groupCheckReferencia">
+                    <table wicket:id="referenciasDataTable"
+                           class="pf-c-table pf-m-grid-md pf-m-compact"
+                           role="grid"
+                           aria-label="Tabla de referencias" 
+                           >
+                        <thead>
+                            <tr role="row" class="pf-m-nowrap"> 
+                                <th role="columnheader" scope="col"></th>
+                                <th role="columnheader" scope="col"># Referencia </th> 
+                                <th role="columnheader" scope="col">Descripci&oacute;n</th>
+                                <th role="columnheader" scope="col">T. Doc</th>  
+                                <th role="columnheader" scope="col"> Identificaci&oacute;n</th>
+                                <th role="columnheader" scope="col">Tipo</th>   
+                            </tr>
+                        </thead>
+
+                        <tbody role="rowgroup">
+                            <tr wicket:id="listaReferencias" role="row">
+                                <td>
+                                    <label>
+                                        <input wicket:id="seleccion" type="checkbox" />
+                                    </label>
+                                </td>
+
+                                <td role="cell" data-label="Número Referencia">
+                                    <span wicket:id="numeroReferencia"></span>
+                                </td>
+                                <td role="cell" data-label="Descripción">
+                                    <span wicket:id="descripcion"></span>
+                                </td>  
+                                <td role="cell" data-label="Tipo documento">
+                                    <span wicket:id="tipoDocumento"></span>
+                                </td>  
+                                <td role="cell" data-label="Idnetificación">
+                                    <span wicket:id="identificacion"></span>
+                                </td>  
+                                <td role="cell" data-label="Tipo">
+                                    <span wicket:id="tipo"></span>
+                                </td>  
+                            </tr>
+                        </tbody>
+                    </table>
+                </span>
+            </form>
+        </div>
+        <div class="pf-c-modal-box__footer">
+            <div class="pf-c-action-list">
+                <div class="pf-c-action-list__item">
+                    <button class="pf-c-button pf-m-primary" wicket:id="aceptar" type="button">Aceptar</button>
+                </div>
+                <div class="pf-c-action-list__item">
+                    <button class="pf-c-button pf-m-secondary" wicket:id="cancelar" type="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:panel>

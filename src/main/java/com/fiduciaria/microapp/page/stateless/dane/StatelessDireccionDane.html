@@ -1,0 +1,244 @@
+<wicket:panel>
+    <div  class="pf-c-modal-box pf-m-lg"
+          role="dialog"  aria-modal="true"  aria-labelledby="modal-lg-title"  aria-describedby="modal-lg-description"  >
+        <div class="pf-c-button pf-m-plain"  wicket:id="cerrar">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </div>
+        <header class="pf-c-modal-box__header">
+            <h1 class="pf-c-modal-box__title" id="modal-lg-title">
+                <wicket:message key="direccion.estandar.dane.titulo"> </wicket:message> 
+            </h1>
+        </header>
+        <div class="pf-c-modal-box__body"  >
+            <form class="pf-c-form" wicket:id="direccionDaneForm"  id="direccionDaneForm" style="--pf-c-form--GridGap: .4rem;">
+
+                <div class="pf-c-form__group">
+                    <div class="pf-c-form__group-label">
+                        <label class="pf-c-form__label" for="form-vertical-name">
+                            <span class="pf-c-form__label-text">
+                                <wicket:message key="direccion.estandar.dane.formulario.titulo"></wicket:message>
+                            </span>&nbsp; 
+                        </label>
+                    </div>
+                    <div class="pf-c-input-group">
+                        <input    class="pf-c-form-control"   type="text"  wicket:id="direccionnoEstandar" id="direccionnoEstandar"/>
+                        <button class="pf-c-button pf-m-plain" type="button" >
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                        </button>
+                        <button class="pf-c-button pf-m-plain"  type="button" >
+                            <i class="fas fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-all-4-col-on-lg pf-m-all-4-col-on-xl" >
+                    <div class="pf-c-form__group">
+                        <div class="pf-c-form__group-label">
+                            <label class="pf-c-form__label" for="selectTipo">
+                                <span class="pf-c-form__label-text">Tipo de direcci&oacute;n</span>&nbsp; 
+                            </label>&nbsp; 
+                        </div>
+                        <div class="pf-c-form__group-control">
+                            <select class="pf-c-form-control pf-m-placeholder" wicket:id="selectTipo" id="selectTipo"> </select>
+                        </div>
+                    </div>
+                </div>
+                <wicket:container wicket:id="seccionDireccionEstandar" id="seccionDireccionEstandar"> 
+                    <label><strong>Vía principal</strong></label>
+
+                    <div class="pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-all-2-col-on-lg pf-m-all-2-col-on-xl" >
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="tipovia">
+                                    <span class="pf-c-form__label-text">Tipo de vía:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select class="pf-c-form-control" wicket:id="tipovia"  id="tipovia"> 
+                            </select>
+                        </div>
+
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="numeroViaPrincipal">
+                                    <span class="pf-c-form__label-text">N&uacute;mero:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <input type="text" class="pf-c-form-control  pf-m-2-col-on-lg  pf-m-2-col-on-xl"   wicket:id="numeroViaPrincipal" id="numeroViaPrincipal" />
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="letraViaPrincipal">
+                                    <span class="pf-c-form__label-text">Letra:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select class="pf-c-form-control"  wicket:id="letraViaPrincipal" id="letraViaPrincipal" >
+                                <option> </option>
+                            </select>
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="bisViaPrincipal">
+                                    <span class="pf-c-form__label-text">Sufijo:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select  class="pf-c-form-control"  wicket:id="bisViaPrincipal" id="bisViaPrincipal" >
+                                <option>opt 1</option>
+                            </select>
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="letraSufijoPrincipal">
+                                    <span class="pf-c-form__label-text">Letra sufijo:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select class="pf-c-form-control"  wicket:id="letraSufijoPrincipal" id="letraSufijoPrincipal" >
+                                <option> </option>
+                            </select>
+                        </div>
+
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="cuadranteViaPrincipal">
+                                    <span class="pf-c-form__label-text">Cuadrante:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select class="pf-c-form-control"   wicket:id="cuadranteViaPrincipal" id="cuadranteViaPrincipal">
+                                <option>opt 1</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <label><strong>Vía generadora </strong> </label>
+                    <div
+                        class="pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-all-2-col-on-lg pf-m-all-2-col-on-xl"  > 
+
+
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="numeroViaGeneradora">
+                                    <span class="pf-c-form__label-text">No. Vía</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <input  type="text"  class="pf-c-form-control"  wicket:id="numeroViaGeneradora"  id="numeroViaGeneradora" />
+                        </div>
+
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="letraViaGeneradora">
+                                    <span class="pf-c-form__label-text">Letra:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select  class="pf-c-form-control"  wicket:id="letraViaGeneradora" id="letraViaGeneradora" >
+                                <option>opt 1</option>
+                            </select>
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="bisViaGeneradora">
+                                    <span class="pf-c-form__label-text">Sufijo:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select  class="pf-c-form-control"  wicket:id="bisViaGeneradora" id="bisViaGeneradora">
+                                <option>opt 1</option>
+                            </select>
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="letraSufijoGeneradora">
+                                    <span class="pf-c-form__label-text">Letra sufijo:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select  class="pf-c-form-control"  wicket:id="letraSufijoGeneradora" id="letraSufijoGeneradora">
+                                <option>opt 1</option>
+                            </select>
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="placaComplemento">
+                                    <span class="pf-c-form__label-text">Placa:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <input  type="text"   class="pf-c-form-control"  wicket:id="placaComplemento" id="placaComplemento" />
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" for="cuadranteViaGeneradora">
+                                    <span class="pf-c-form__label-text">Cuadrante:</span>&nbsp; 
+                                </label>&nbsp; 
+                            </div>
+                            <select  class="pf-c-form-control"  wicket:id="cuadranteViaGeneradora"  id="cuadranteViaGeneradora">
+                                <option>opt 1</option>
+                            </select>
+                        </div>
+                    </div>
+                </wicket:container>
+                <wicket:container wicket:id="seccionDireccionNoEstandar" id="seccionDireccionNoEstandar">
+
+                    <label><strong>Ubicaci&oacute;n</strong></label>
+
+                    <div class="pf-l-grid pf-m-all-12-col-on-sm pf-m-all-6-col-on-md pf-m-all-6-col-on-lg pf-m-all-6-col-on-xl" >
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label"><label class="pf-c-form__label" for="tiponoestandar">
+                                    <span class="pf-c-form__label-text">Tipo</span>&nbsp;
+                                    <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
+                                </label>&nbsp;
+                                <span class="pf-c-form__group-label-help" ><i class="pficon pf-icon-help" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <select class="pf-c-form-control"   wicket:id="tiponoestandar" id="tiponoestandar"> 
+                            </select>
+                        </div>
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label"><label class="pf-c-form__label" for="nombretiponoestandar">
+                                    <span class="pf-c-form__label-text">Texto complementario</span>&nbsp;
+                                    <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
+                                </label>&nbsp;
+                                <span class="pf-c-form__group-label-help" ><i class="pficon pf-icon-help" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="pf-c-form-control  pf-m-2-col-on-lg  pf-m-2-col-on-xl"  wicket:id="nombretiponoestandar" id="nombretiponoestandar"/>
+                        </div>
+                    </div> 
+                </wicket:container>
+                <label><strong>Complementos</strong></label>
+                <div class="pf-c-form__group">
+                    <div class="pf-c-form__group-label"><label class="pf-c-form__label" for="complemento">
+                            <span class="pf-c-form__label-text">Datos adicionales </span>&nbsp;
+                            <span class="pf-c-form__label-required" aria-hidden="true">&#42;</span></label>&nbsp;<span
+                            class="pf-c-form__group-label-help"   ><i class="pficon pf-icon-help" aria-hidden="true"></i></span>
+                    </div>
+                    <div class="pf-c-input-group">
+                        <select class="pf-c-form-control"  wicket:id="complemento"  id="complemento">
+                            <option>opt 1</option>
+                        </select>  
+                        <div class="pf-c-input-group">
+                            <input  class="pf-c-form-control" type="text" wicket:id="numeroComplemento" id="numeroComplemento" />
+                            <button
+                                class="pf-c-button pf-m-plain"
+                                type="button" 
+                                >
+                                <i class="fas fa-edit" aria-hidden="true"></i>
+                            </button>
+                            <button
+                                class="pf-c-button pf-m-plain"
+                                type="button" 
+                                >
+                                <i class="fas fa-trash" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf-c-form__group pf-m-action">
+                    <div class="pf-c-form__actions">
+                        <button class="pf-c-button pf-m-primary" type="submit" wicket:id="aceptar" id="aceptar"> Aceptar</button>
+                        <button class="pf-c-button pf-m-link" type="reset" wicket:id="cancelarBtn" id="cancelarBtn">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <footer class="pf-c-modal-box__footer"> 
+
+        </footer>
+    </div>
+</wicket:panel>

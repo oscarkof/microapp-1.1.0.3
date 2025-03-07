@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <div class="pf-l-split pf-m-gutter pf-u-p-lg">
+        <div wicket:id="contenedorIzquierdo" class="pf-l-split__item">
+
+            <h1 class="pf-c-title pf-m-xl">
+                <wicket:message key="admon.delegada.dominios.lista.seccion.titulo.label"></wicket:message>
+            </h1>
+
+            <div wicket:id="toolbarDominios" class="pf-c-toolbar" >
+                <wicket:container wicket:id="toolbarDominioContent"></wicket:container>
+            </div> 
+
+            <ul wicket:id="dominioDataView" class="pf-c-data-list" role="list"  >
+
+                <li wicket:id="dominioListView" class="pf-c-data-list__item" 
+                    >
+                    <div class="pf-c-data-list__item-row">
+
+                        <div class="pf-c-data-list__item-content">
+
+                            <div class="pf-c-data-list__cell">
+                                <b >
+                                    <span wicket:id="nombreDominio"></span>
+                                </b>
+                                <p >
+                                    <span wicket:id="descripcionDominio"></span> 
+                                </p> 
+                            </div>
+                        </div>
+                        <div class="pf-c-data-list__item-action">
+                            <div class="pf-c-data-list__action">
+                                <button wicket:id="detalleTenat"
+                                        class="pf-c-dropdown__toggle pf-m-plain" 
+                                        aria-expanded="false" type="button"
+                                        aria-label="Acciones"  >
+                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+        <div wicket:id="contenedorDerecho" class="pf-l-split__item pf-m-fill">
+
+            <div wicket:id="detalleSeccion"></div>
+
+        </div>
+
+    </div>
+
+    <wicket:fragment wicket:id="formularioNuevoDelegado">
+        <wicket:container wicket:id="formDelegadoPanel"></wicket:container>
+    </wicket:fragment>
+    <wicket:fragment wicket:id="detalleDelegado">
+        <wicket:container wicket:id="mainPanel"></wicket:container>
+    </wicket:fragment>
+</wicket:panel>

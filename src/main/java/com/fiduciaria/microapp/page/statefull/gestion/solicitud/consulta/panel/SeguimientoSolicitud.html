@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <li wicket:id = "solicitud" 
+        class="pf-c-data-list__item pf-m-expanded"
+        aria-labelledby="data-list-expandable-example-data-list-item-1">
+        <div class="pf-c-data-list__item-row">
+            <div class="pf-c-data-list__item-control">
+                <div class="pf-c-data-list__toggle">
+                    <button wicket:id="toogle" class="pf-c-button pf-m-plain" type="button" 
+                            aria-labelledby="ex-toggle1 data-list-expandable-example-data-list-item1"
+                            aria-label="Toggle details for" 
+                            aria-expanded="false" 
+                            aria-controls="content-1">
+                        <div class="pf-c-data-list__toggle-icon">
+                            <i class="fas fa-angle-right" 
+                               aria-hidden="true"></i>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+            <div class="pf-c-data-list__item-content">
+                <div class="pf-c-data-list__cell pf-m-align-left">
+                    <div class="pf-l-flex pf-m-column pf-m-space-items-md">
+                        <div class="pf-l-flex pf-m-column pf-m-space-items-none">
+                            <div class="pf-l-flex__item">
+                                <p class="pf-u-color-200  pf-u-font-size-lg pf-u-font-weight-bold" >
+                                <wicket:container wicket:id="tipoSolicitud"/>
+                                </p>
+                            </div>
+                            <div class="pf-l-flex__item">
+                                <p>
+                                <wicket:container wicket:id="codigoNegocio"/>
+                                &nbsp;&nbsp;
+                                <wicket:container wicket:id="negocio"/>
+                                </p>
+                            </div>
+                            <div class="pf-l-flex__item">
+                                <small>
+                                    Radicado número &nbsp;&nbsp;<wicket:container wicket:id="numeroRadicado"/> 
+                                    en fecha &nbsp;&nbsp; <wicket:container wicket:id="fechaRadicado"/> 
+                                </small>
+                            </div>
+                        </div>
+                        <div class="pf-l-flex pf-m-wrap"> 
+                            <div class="pf-l-flex pf-m-space-items-xs">
+                                <div class="pf-l-flex__item">
+
+                                    <span wicket:id="estadoSolicitud" >
+                                        <span class="pf-c-label__content">
+                                            <span class="pf-c-label__icon">
+                                                <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                                            </span>
+                                            <span wicket:id="estadoSolicitudLabel" ></span> 
+                                        </span>
+                                    </span> 
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pf-c-data-list__cell pf-m-align-right pf-m-no-fill">
+                    <button wicket:id="agregarTarea" class="pf-c-button pf-m-secondary" type="button">Agregar Tarea</button> 
+                </div>
+            </div>
+        </div>
+        <section wicket:id="contenidoSeguimientoSolicitud" class="pf-c-data-list__expandable-content" 
+                 aria-label=" ">
+            <div class="pf-c-data-list__expandable-content-body pf-m-no-padding">
+                <table class="pf-c-table pf-m-compact pf-m-grid-lg pf-m-no-border-rows"
+                       role="grid" aria-label="" >
+                    <thead>
+                        <tr role="row">
+                            <td class="pf-c-tab le__check" role="cell"> </td>
+                            <th role="columnheader" scope="col">Tipo Tarea</th>
+                            <th role="columnheader" scope="col">T&iacute;tulo</th>
+                            <th role="columnheader" scope="col">Asignado en</th>
+                            <th role="columnheader" scope="col">Creado por</th>
+                            <th role="columnheader" scope="col">Asignado a</th>
+                            <th role="columnheader" scope="col">Estado</th>
+                            <th role="columnheader" scope="col">Descripi&oacute;n</th> 
+                        </tr>
+                    </thead>
+                    <tbody role="rowgroup">
+                        <tr role="row" wicket:id="tareaRelacionada">
+                            <td class="pf-c-table__check" role="cell"> 
+                            </td>
+                            <td role="cell" data-label="Tipo tarea">
+                                <span wicket:id="tipoTarea" > </span>
+                            </td>
+                            <td role="cell" data-label="Titulo "
+                                wicket:id="titulo"> </td>
+
+                            <td role="cell" data-label="Asignado en "
+                                wicket:id="fechaCreacion"></td>
+                            <td role="cell" data-label="Creado por "
+                                wicket:id="usuarioCrea"> </td>
+
+                            <td role="cell" data-label="Asignado a "
+                                wicket:id="usuarioAsignado"> </td>
+
+                            <td role="cell" data-label="Estado" 
+                                wicket:id="estado"></td>
+
+                            <td role="cell" data-label="Descripción " 
+                                wicket:id="descripcion"> </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </li>
+</wicket:panel>

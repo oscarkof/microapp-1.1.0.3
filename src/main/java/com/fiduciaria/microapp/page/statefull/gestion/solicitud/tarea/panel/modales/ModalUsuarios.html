@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <div class="pf-c-modal-box pf-m-sm" role="dialog" style="max-height: calc(100vh - 180px);" >
+        <button class="pf-c-button pf-m-plain" 
+                wicket:id="cerrarModal" type="button" aria-label="Cerrar">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+
+        <div class="pf-c-modal-box__header" >
+
+            <form wicket:id="formFiltro">
+                <div wicket:id="filtroToolbar" class="pf-c-toolbar"> 
+                    <div class="pf-c-toolbar__content">
+                        <div class="pf-c-toolbar__content-section">
+                            <div class="pf-c-toolbar__group"> 
+                                <div class="pf-c-toolbar__item pf-m-search-filter">
+                                    <div class="pf-c-input-group" aria-label="search filter" role="group">
+                                        <select wicket:id="opcionesFiltro" class="pf-c-form-control pf-c-select" style="width: 275px">
+
+                                        </select>
+                                        <div class="pf-c-text-input-group">
+                                            <div class="pf-c-text-input-group__main pf-m-icon">
+                                                <span class="pf-c-text-input-group__text">
+                                                    <span class="pf-c-text-input-group__icon">
+                                                        <i class="fas fa-fw fa-search"></i>
+                                                    </span>
+                                                    <input
+                                                        class="pf-c-text-input-group__text-input"
+                                                        type="text"
+                                                        wicket:id="valorFiltroUsuario"
+                                                        value
+                                                        placeholder="Filtrar por"
+                                                        aria-label="Tipo Para Filtrar"
+                                                        />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="pf-c-toolbar__item pf-m-overflow-menu">
+                                    <div class="pf-c-overflow-menu">
+                                        <div class="pf-c-overflow-menu__content">
+                                            <div class="pf-c-overflow-menu__group pf-m-button-group">
+                                                <div class="pf-c-overflow-menu__item">
+                                                    <a class="pf-c-button pf-m-primary" 
+                                                       wicket:id="filtrarUsuarios"
+                                                       >
+                                                        Filtrar <i class="fas fa-filter"></i>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="pf-c-modal-box__body">  
+            <table wicket:id="usuariosDataTable"
+                   class="pf-c-table pf-m-grid-md pf-m-compact"
+                   role="grid"
+                   aria-label="Tabla de usuarios" 
+                   >
+                <thead>
+                    <tr role="row">  
+                        <th role="columnheader" scope="col" colspan="2"><div wicket:id="navigation"></div></th>  
+                    </tr>
+                </thead>
+                <thead>
+                    <tr role="row"> 
+                        <th role="columnheader" scope="col">Usuario</th>
+                        <th role="columnheader" scope="col">Descripci&oacute;n</th>  
+                    </tr>
+                </thead>
+
+                <tbody role="rowgroup">
+                    <tr wicket:id="listaUsuarios" role="row">
+
+                        <td role="cell" data-label="Usuario">
+                            <span wicket:id="usuario"></span>
+                        </td>
+                        <td role="cell" data-label="Descripcion">
+                            <span wicket:id="primerNombre"></span>
+                        </td>  
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</wicket:panel>

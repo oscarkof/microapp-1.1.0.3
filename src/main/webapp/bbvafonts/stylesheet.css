@@ -1,0 +1,54 @@
+@font-face {
+    font-family: system-ui;
+    src: url('BentonSansBBVA-Light.woff2') format('woff2'),
+        url('BentonSansBBVA-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: system-ui;
+    src: url('BentonSansBBVA-Bold.woff2') format('woff2'),
+        url('BentonSansBBVA-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: system-ui;
+    src: url('BentonSansBBVA-Book.woff2') format('woff2'),
+        url('BentonSansBBVA-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: system-ui;
+    src: url('BentonSansBBVA-BookItalic.woff2') format('woff2'),
+        url('BentonSansBBVA-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: system-ui;
+    src: url('BentonSansBBVA-MediumItalic.woff2') format('woff2'),
+        url('BentonSansBBVA-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: system-ui;
+    src: url('BentonSansBBVA-Medium.woff2') format('woff2'),
+        url('BentonSansBBVA-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

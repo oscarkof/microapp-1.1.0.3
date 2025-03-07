@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <div class="pf-c-wizard">
+
+        <div class="pf-c-wizard__outer-wrap">
+            <div class="pf-c-wizard__inner-wrap">
+                <nav class="pf-c-wizard__nav" aria-label="Steps">
+                    <ol class="pf-c-wizard__nav-list">
+                        <li class="pf-c-wizard__nav-item">
+                            <button class="pf-c-wizard__nav-link  pf-m-current">Información Básica</button>
+                        </li>
+                        <li class="pf-c-wizard__nav-item">
+                            <button class="pf-c-wizard__nav-link">Validaci&oacute;n</button> 
+                        </li>
+                        <li class="pf-c-wizard__nav-item">
+                            <button class="pf-c-wizard__nav-link">Informaci&oacute;n Adicional</button>
+                        </li>
+                        <li class="pf-c-wizard__nav-item">
+                            <button class="pf-c-wizard__nav-link" disabled>Resumen</button>
+                        </li>
+                    </ol>
+                </nav>
+                <main class="pf-c-wizard__main" tabindex="0">
+                    <div class="pf-c-wizard__main-body">
+
+                        <span class="pf-u-font-size-xl">
+                            <i wicket:id="backtoUsuarios" class="fas fa-chevron-left"></i> &nbsp;&nbsp; 
+                            <wicket:message key="gestion.usuario.opcion.usuario.nuevo.header.label"></wicket:message>
+                        </span>
+
+                        <form class="pf-c-form pf-l-grid pf-m-all-6-col" wicket:id="formularioNuevoUsuario"> 
+                            <div  class="pf-l-grid__item pf-m-12-col-on-sm pf-m-12-col-on-md
+                                  pf-m-12-col-on-lg pf-m-12-col-on-xl">
+                                <select wicket:id="aplicativo"></select>
+                                <select wicket:id="negocio"></select>
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="codigoUsuario" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <select  wicket:id="tipoIdentificacion" ></select>
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="numeroIdentificacion" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="primerNombre" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="segundoNombre" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="primerApellido" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="segundoApellido" />
+                            </div> 
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="correoElectronico" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="telefono" />
+                            </div>
+                            <div class="pf-l-grid__item">
+                                <input type="text" wicket:id="celular" />
+                            </div>
+                            <div class="pf-l-grid__item">
+
+
+                                <label class="pf-c-switch pf-u-my-md" for="switchUsuarioSalaVentas">
+                                    <input wicket:id="usarioSalaventas"
+                                           class="pf-c-switch__input"
+                                           type="checkbox"
+                                           id="switchUsuarioSalaVentas" 
+                                           checked
+                                           />
+
+                                    <span class="pf-c-switch__toggle"></span>
+
+                                    <span
+                                        class="pf-c-switch__label pf-m-on"
+
+                                        aria-hidden="true"
+                                        >Es Usuario Sala de Ventas</span>
+
+                                    <span
+                                        class="pf-c-switch__label pf-m-off"
+
+                                        aria-hidden="true"
+                                        >No es Usuario Sala de Ventas</span>
+                                </label>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </main>
+            </div>
+            <footer class="pf-c-wizard__footer">
+                <button class="pf-c-button pf-m-primary" type="submit">Siguiente</button>
+                <button class="pf-c-button pf-m-secondary" type="button">Regresar</button>
+                <div class="pf-c-wizard__footer-cancel">
+                    <button class="pf-c-button pf-m-link" type="button">Cancelar</button>
+                </div>
+            </footer>
+        </div>
+    </div>
+</wicket:panel>

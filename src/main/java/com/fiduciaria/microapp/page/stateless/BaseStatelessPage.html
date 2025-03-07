@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org"
+      lang="ES">
+
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body> 
+        <wicket:extend>
+
+            <header
+                class="pf-c-masthead pf-m-display-inline 
+                pf-m- display-stack-on-lg pf-m-display-inline -on-sm"
+                style="box-shadow: 0 0 1px 0 #000; background: #072146;"
+                >
+                <span class="pf-c-masthead__toggle">
+
+                </span>
+                <div class="pf-c-masthead__main">
+
+                </div>
+                <div class="pf-c-masthead__content">
+                    <span>
+                        <img class="pf-c-masthead__brand" wicket:id="logo" 
+                             style="height: 28px; vertical-align: middle;" />
+                        <span style="font-size: 13px;
+                              line-height: 1.1rem;
+                              display: block;
+                              max-width: 128px;
+                              margin: 0 0 0 65px;
+                              color: #fff;
+                              text-align: center;
+                              width: 100%;
+                              font-family: inherit;
+                              word-wrap: break-word;
+                              font-weight: 600;">Asset Management Sociedad Fiduciaria</span>
+
+                    </span>
+                </div>
+            </header>
+
+
+            <wicket:child />
+
+
+            <section class="pf-c-page__main-section pf-u-p-xl"
+                     style="
+                     background-color: #072146;
+                     color: #bdbdbd;
+                     font-family: 'BentonSansBBVA Medium', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+                     padding: 4.8125em 0;
+                     padding-right: 0px;
+                     padding-left: 0px;
+                     "
+                     ></section>
+
+            <div wicket:id="modalRoot" class="pf-c-backdrop"> 
+                <div class="pf-l-bullseye">
+                    <wicket:container wicket:id="modalContent"></wicket:container>
+                </div>
+
+            </div>
+
+        </wicket:extend>
+
+    </body>
+</html>

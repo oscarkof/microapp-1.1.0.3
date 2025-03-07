@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <form wicket:id="filtro">
+        <div class="pf-c-toolbar__group pf-m-filter-group">
+
+            <div class="pf-c-toolbar__item">
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show-on-xl">
+                    <div class="pf-c-toolbar__toggle">
+                        <button class="pf-c-button pf-m-plain" type="button" 
+                                aria-label="Show filters" aria-expanded="false" 
+                                aria-controls="-expandable-content">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </button>
+                    </div> 
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="Filtro búsqueda" role="group">
+                            <div class="pf-c-select" >
+                                <span id="-select-name-label" hidden="">Elija uno</span>
+                                <select class="pf-c-select pf-c-form-control" wicket:id="selectTipoSolicitud"></select>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--div class="pf-c-toolbar__item">
+                <div class="pf-c-select">
+                    <span
+                        id="toolbar-group-types-example-select-checkbox-filter3-label"
+                        hidden
+                        >Choose one</span>
+
+                    <button
+                        class="pf-c-select__toggle"
+                        type="button"
+                        id="toolbar-group-types-example-select-checkbox-filter3-toggle"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        aria-labelledby="toolbar-group-types-example-select-checkbox-filter3-label toolbar-group-types-example-select-checkbox-filter3-toggle"
+                        >
+                        <div class="pf-c-select__toggle-wrapper">
+                            <span class="pf-c-select__toggle-text">Filter 3</span>
+                        </div>
+                        <span class="pf-c-select__toggle-arrow">
+                            <i class="fas fa-caret-down" aria-hidden="true"></i>
+                        </span>
+                    </button>
+
+                    <ul
+                        class="pf-c-select__menu"
+                        role="listbox"
+                        aria-labelledby="toolbar-group-types-example-select-checkbox-filter3-label"
+                        hidden
+                        >
+                        <li role="presentation">
+                            <button class="pf-c-select__menu-item" role="option">Running</button>
+                        </li>
+                        <li role="presentation">
+                            <button
+                                class="pf-c-select__menu-item pf-m-selected"
+                                role="option"
+                                aria-selected="true"
+                                >
+                                Stopped
+                                <span class="pf-c-select__menu-item-icon">
+                                    <i class="fas fa-check" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </li>
+                        <li role="presentation">
+                            <button class="pf-c-select__menu-item" role="option">Down</button>
+                        </li>
+                        <li role="presentation">
+                            <button class="pf-c-select__menu-item" role="option">Degraded</button>
+                        </li>
+                        <li role="presentation">
+                            <button
+                                class="pf-c-select__menu-item"
+                                role="option"
+                                >Needs maintenance</button>
+                        </li>
+                    </ul>
+                </div>
+            </div-->
+
+            <div class="pf-c-toolbar__item">
+                <button aria-disabled="false" class="pf-c-button pf-m-link" 
+                        type="button" wicket:id="manejarColumnas"> Columnas </button>
+            </div>
+        </div>
+    </form>
+</wicket:panel>

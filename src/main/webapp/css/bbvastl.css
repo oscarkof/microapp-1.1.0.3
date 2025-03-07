@@ -1,0 +1,8 @@
+ 
+html,body {
+    font-family: system-ui !important; 
+}
+
+.feedbackPanel .feedbackPanelERROR {
+    color: #a30000;
+}

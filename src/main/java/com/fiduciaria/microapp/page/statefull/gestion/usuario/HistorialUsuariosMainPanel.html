@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<wicket:panel>
+    <div wicket_:id="seccionUsuarios" class="pf-c-card pf-m-rounded  pf-u-pb-lg pf-u-px-md ">
+
+        <div class="pf-c-card__header ">
+            <h1 class="pf-u-font-size-2xl">
+                <wicket:message key="gestion.usuario.opcion.historial.header.label"></wicket:message>
+            </h1>
+        </div> 
+        <div class="pf-c-card__body">
+            <wicket:message key="gestion.usuario.opcion.historial.descripcion.body"></wicket:message>
+        </div>
+
+        <wicket:container wicket:id="tablaHistorialUsuarios" ></wicket:container> 
+    </div>
+</wicket:panel>

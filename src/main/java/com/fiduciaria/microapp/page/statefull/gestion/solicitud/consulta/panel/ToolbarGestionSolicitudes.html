@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<wicket:panel>
+    <form wicket:id="toolbarForm">
+        <div class="pf-c-toolbar__content">
+            <div class="pf-c-toolbar__content-section pf-m-nowrap">
+
+
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show-on-xl">
+                    <div class="pf-c-toolbar__toggle">
+                        <button class="pf-c-button pf-m-plain" type="button" 
+                                aria-label="Show filters" aria-expanded="false" 
+                                aria-controls="-expandable-content">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </button>
+                    </div> 
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="Filtro búsqueda" role="group">
+                            <div class="pf-c-select" >
+                                <span id="-select-name-label" hidden="">Elija uno</span>
+                                <select class="pf-c-select pf-c-form-control" wicket:id="selectEstado"></select>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show-on-xl">
+                    <div class="pf-c-toolbar__toggle">
+                        <button class="pf-c-button pf-m-plain" type="button" 
+                                aria-label="Show filters" aria-expanded="false" 
+                                aria-controls="-expandable-content">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </button>
+                    </div> 
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="Filtro búsqueda" role="group">
+                            <div class="pf-c-select" >
+                                <span id="-select-name-label" hidden="">Elija uno</span>
+                                <select class="pf-c-select pf-c-form-control" wicket:id="selectTipoSolicitud"></select>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show-on-xl">
+                    <div class="pf-c-toolbar__toggle">
+                        <button class="pf-c-button pf-m-plain" type="button" 
+                                aria-label="Show filters" aria-expanded="false" 
+                                aria-controls="-expandable-content">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </button>
+                    </div> 
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="Filtro búsqueda" role="group">
+                            <div class="pf-c-select" >
+                                <span id="-select-name-label" hidden="">Elija uno</span>
+                                <select class="pf-c-select pf-c-form-control" wicket:id="selectColumnaFiltro"></select>
+
+                            </div>
+                            <div class="pf-c-text-input-group">
+                                <div class="pf-c-text-input-group__main pf-m-icon">
+                                    <span class="pf-c-text-input-group__text">
+                                        <span class="pf-c-text-input-group__icon">
+                                            <i class="fas fa-fw fa-search"></i>
+                                        </span>
+                                        <input  class="pf-c-text-input-group__text-input" 
+                                                type="text" value="" 
+                                                placeholder="Filtrar por nombre" 
+                                                aria-label="Ingrese datos para filtrar" 
+                                                style="width: 300px;">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pf-c-toolbar__item pf-m-pagination">
+                    <div class="pf-c-pagination pf-m-compact">
+                        <div class="pf-c-options-menu">
+                            <button class="pf-c-options-menu__toggle pf-m-text pf-m-plain" 
+                                    type="button" id="-top-pagination-toggle" 
+                                    aria-haspopup="listbox" aria-expanded="false">
+                                <span class="pf-c-options-menu__toggle-text">
+                                    <b><span wicket:id="mostrandoDeHasta"></span></b>&nbsp;de&nbsp;
+                                    <b> <span wicket:id="totalRegistros"></span></b>
+                                </span>
+                                <div class="pf-c-options-menu__toggle-icon">
+                                    <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                </div>
+                            </button>
+
+                        </div>
+                        <nav class="pf-c-pagination__nav" aria-label="Toolbar para paginación">
+                            <div class="pf-c-pagination__nav-control pf-m-prev">
+                                <button class="pf-c-button pf-m-plain" 
+                                        type="button" disabled="" 
+                                        aria-label="Regresar a página anterior">
+                                    <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="pf-c-pagination__nav-control pf-m-next">
+                                <button class="pf-c-button pf-m-plain" 
+                                        type="button" aria-label="Ir a la siguiente página">
+                                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-c-toolbar__expandable-content pf-m-hidden" id="-expandable-content" hidden=""></div>
+        </div>
+    </form>
+</wicket:panel>

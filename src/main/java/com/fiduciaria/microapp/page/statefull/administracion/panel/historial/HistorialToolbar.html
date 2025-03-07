@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<wicket:panel>
+    <div class="pf-c-toolbar">
+        <div class="pf-c-toolbar__content">
+            <div class="pf-c-toolbar__content-section pf-m-nowrap">
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show-on-xl">
+                    <div class="pf-c-toolbar__toggle">
+                        <button class="pf-c-button pf-m-plain" 
+                                type="button" aria-label="Show filters" 
+                                aria-expanded="false" 
+                                aria-controls="-expandable-content">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="filtro busqueda" 
+                             role="group">
+                            <div class="pf-c-select" style="">
+                                <span id="-select-name-label" hidden="">Seleccione uno</span>
+
+                                <button class="pf-c-select__toggle" 
+                                        type="button" 
+                                        aria-haspopup="true" 
+                                        aria-expanded="false" 
+                                        aria-labelledby="-select-name-label -select-name-toggle">
+                                    <div class="pf-c-select__toggle-wrapper">
+                                        <span class="pf-c-select__toggle-icon">
+                                            <i class="fas fa-filter" aria-hidden="true"></i>
+                                        </span>
+                                        <span class="pf-c-select__toggle-text">
+                                            Tipo Acci&oacute;n
+                                        </span>
+                                    </div>
+                                    <span class="pf-c-select__toggle-arrow">
+                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+
+                                <ul class="pf-c-select__menu" 
+                                    role="listbox" 
+                                    aria-labelledby="-select-name-label" 
+                                    style=" z-index: 999;" hidden="">
+                                    <li role="presentation">
+                                        <button class="pf-c-select__menu-item" 
+                                                role="option">
+                                            Registro de usuario nuevo 
+                                        </button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="pf-c-select__menu-item pf-m-selected" 
+                                                role="option" aria-selected="true">
+                                            Bloquear usario
+                                            <span class="pf-c-select__menu-item-icon">
+                                                <i class="fas fa-check" aria-hidden="true"></i>
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="pf-c-select__menu-item" 
+                                                role="option">
+                                            Desbloquear usuario
+                                        </button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="pf-c-select__menu-item" 
+                                                role="option">
+                                            Enrolar en OTP
+                                        </button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="pf-c-select__menu-item" 
+                                                role="option">Cambiar Contrase&ntilde;a</button>
+                                    </li>
+                                    <li role="presentation">
+                                        <button class="pf-c-select__menu-item" 
+                                                role="option">Reiniciar Contrase&ntilde;a</button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="pf-c-text-input-group">
+                                <div class="pf-c-text-input-group__main pf-m-icon">
+                                    <span class="pf-c-text-input-group__text">
+                                        <span class="pf-c-text-input-group__icon">
+                                            <i class="fas fa-fw fa-search"></i>
+                                        </span>
+                                        <input class="pf-c-text-input-group__text-input"
+                                               type="text" value="" 
+                                               placeholder="Filtrar por nombre" 
+                                               aria-label="Type to filter">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pf-c-toolbar__group pf-m-filter-group">
+                        <div class="pf-c-toolbar__item">
+                            <div class="pf-c-select">
+                                <span id="-select-checkbox-status-label" 
+                                      hidden="">Choose one</span>
+
+                                <button class="pf-c-select__toggle" type="button" 
+                                        aria-haspopup="true" aria-expanded="false" 
+                                        aria-labelledby="-select-checkbox-status-label -select-checkbox-status-toggle">
+                                    <div class="pf-c-select__toggle-wrapper">
+                                        <span class="pf-c-select__toggle-text">Estado</span>
+                                    </div>
+                                    <span class="pf-c-select__toggle-arrow">
+                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+
+                                <div class="pf-c-select__menu" hidden="">
+                                    <fieldset class="pf-c-select__menu-fieldset" 
+                                              aria-label="Select input">
+                                        <label class="pf-c-check pf-c-select__menu-item pf-m-description"
+                                               for="-select-checkbox-status-active">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox" 
+                                                   name="-select-checkbox-status-active">
+
+                                            <span class="pf-c-check__label">Activo</span>
+                                            <span class="pf-c-check__description">This is a description</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item pf-m-description" 
+                                               for="-select-checkbox-status-canceled">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-status-canceled">
+
+                                            <span class="pf-c-check__label">
+                                                Inactivo</span>
+                                            <span class="pf-c-check__description">
+                                                This is a really long description that describes the 
+                                                menu item. This is a really long description 
+                                                that describes the menu item.</span>
+                                        </label>
+                                        <!--label class="pf-c-check pf-c-select__menu-item" 
+                                               for="-select-checkbox-status-paused">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-status-paused">
+
+                                            <span class="pf-c-check__label">
+                                                Paused</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item"
+                                               for="-select-checkbox-status-warning">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-status-warning">
+
+                                            <span class="pf-c-check__label">
+                                                Warning</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item" 
+                                               for="-select-checkbox-status-restarted">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-status-restarted">
+
+                                            <span class="pf-c-check__label">
+                                                Restarted</span>
+                                        </label-->
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pf-c-toolbar__item">
+                            <div class="pf-c-select">
+                                <span id="-select-checkbox-risk-label" 
+                                      hidden="">Seleccione uno</span>
+
+                                <button class="pf-c-select__toggle" 
+                                        type="button" 
+                                        aria-haspopup="true" aria-expanded="false" 
+                                        aria-labelledby="-select-checkbox-risk-label -select-checkbox-risk-toggle">
+                                    <div class="pf-c-select__toggle-wrapper">
+                                        <span class="pf-c-select__toggle-text">Negocio</span>
+                                    </div>
+                                    <span class="pf-c-select__toggle-arrow">
+                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+
+                                <div class="pf-c-select__menu" hidden="">
+                                    <fieldset class="pf-c-select__menu-fieldset" aria-label="Select input">
+                                        <label class="pf-c-check pf-c-select__menu-item pf-m-description"
+                                               for="-select-checkbox-risk-active">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-risk-active">
+
+                                            <span class="pf-c-check__label">Active</span>
+                                            <span class="pf-c-check__description">
+                                                This is a description</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item pf-m-description" 
+                                               for="-select-checkbox-risk-canceled">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-risk-canceled">
+
+                                            <span class="pf-c-check__label">Canceled</span>
+                                            <span class="pf-c-check__description">
+                                                This is a really long description that describes 
+                                                the menu item. This is a really long description 
+                                                that describes the menu item.</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item" 
+                                               for="-select-checkbox-risk-paused">
+                                            <input class="pf-c-check__input" 
+                                                   type="checkbox"
+                                                   name="-select-checkbox-risk-paused">
+
+                                            <span class="pf-c-check__label">
+                                                Paused</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item"
+                                               for="-select-checkbox-risk-warning">
+                                            <input class="pf-c-check__input"
+                                                   type="checkbox"
+                                                   name="-select-checkbox-risk-warning">
+
+                                            <span class="pf-c-check__label">
+                                                Warning</span>
+                                        </label>
+                                        <label class="pf-c-check pf-c-select__menu-item"
+                                               for="-select-checkbox-risk-restarted">
+                                            <input class="pf-c-check__input"
+                                                   type="checkbox"
+                                                   name="-select-checkbox-risk-restarted">
+
+                                            <span class="pf-c-check__label">Restarted</span>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pf-c-toolbar__item">
+                    <button class="pf-c-button pf-m-plain" type="button" aria-label="Sort">
+                        <i class="fas fa-sort-amount-down" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+                <div class="pf-c-toolbar__item pf-m-pagination">
+                    <div class="pf-c-pagination pf-m-compact">
+                        <div class="pf-c-options-menu">
+                            <button class="pf-c-options-menu__toggle pf-m-text pf-m-plain" 
+                                    type="button" id="-top-pagination-toggle" 
+                                    aria-haspopup="listbox" 
+                                    aria-expanded="false">
+                                <span class="pf-c-options-menu__toggle-text">
+                                    <b>1 - 10</b>&nbsp;of&nbsp;
+                                    <b>36</b>
+                                </span>
+                                <div class="pf-c-options-menu__toggle-icon">
+                                    <i class="fas fa-caret-down" 
+                                       aria-hidden="true"></i>
+                                </div>
+                            </button>
+                            <ul class="pf-c-options-menu__menu" 
+                                aria-labelledby="-top-pagination-toggle" hidden="">
+                                <li>
+                                    <button class="pf-c-options-menu__menu-item" 
+                                            type="button">5 per page</button>
+                                </li>
+                                <li>
+                                    <button class="pf-c-options-menu__menu-item" 
+                                            type="button">
+                                        10 per page
+                                        <div class="pf-c-options-menu__menu-item-icon">
+                                            <i class="fas fa-check" 
+                                               aria-hidden="true"></i>
+                                        </div>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="pf-c-options-menu__menu-item" 
+                                            type="button">20 per page</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <nav class="pf-c-pagination__nav" 
+                             aria-label="Toolbar top pagination">
+                            <div class="pf-c-pagination__nav-control pf-m-prev">
+                                <button class="pf-c-button pf-m-plain" 
+                                        type="button" disabled="" aria-label="Go to previous page">
+                                    <i class="fas fa-angle-left" 
+                                       aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="pf-c-pagination__nav-control pf-m-next">
+                                <button class="pf-c-button pf-m-plain" 
+                                        type="button" aria-label="Go to next page">
+                                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-c-toolbar__expandable-content pf-m-hidden"
+                 hidden=""></div>
+        </div>
+    </div>
+</wicket:panel>

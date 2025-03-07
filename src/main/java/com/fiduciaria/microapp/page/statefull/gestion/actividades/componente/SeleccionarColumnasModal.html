@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <div role="dialog" class="pf-c-modal-box pf-m-sm">
+        <button  class="pf-c-button pf-m-plain" type="button" wicket:id="cerrarModal">
+            <svg style="vertical-align: -0.125em;" fill="currentColor" height="1em" width="1em"
+                 viewBox="0 0 352 512" aria-hidden="true" role="img">
+            <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 
+                  189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21
+                  356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 
+                  12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+        </button>
+
+        <header class="pf-c-modal-box__header">
+            <h1 id="pf-modal-part-2" class="pf-c-modal-box__title">
+                <span class="pf-c-modal-box__title-text">Manejar Columnas</span></h1>
+            <div id="pf-modal-part-3" class="pf-c-modal-box__description">
+                <div class="pf-c-content"><p class="">Las columnas seleccionadas ser&aacute;n mostradas en la tabla.</p>
+
+                </div>
+
+            </div>
+        </header>
+        <div class="pf-c-modal-box__body">
+            <form wicket:id="formularioColumnas"> 
+                <span wicket:id="seleccionarTodosCheckGroup" aria-disabled="false">  
+                    <input type="checkbox" wicket:id="groupselector"/>&nbsp;&nbsp; Seleccionar todas 
+                    <ul wicket:id="vistaDatos" class="pf-c-data-list pf-m-compact pf-m-grid-md">
+                        <li wicket:id="fila" class="pf-c-data-list__item" > 
+                            <div class="pf-c-data-list__item-row">
+                                <div class="pf-c-data-list__item-control">
+                                    <div class="pf-c-data-list__check">
+                                        <input wicket:id="checkbox" type="checkbox" >
+                                    </div>
+                                </div>
+                                <div class="pf-c-data-list__item-content">
+                                    <div class="pf-c-data-list__cell" >
+                                        <label wicket:for="checkbox">
+                                            <span wicket:id="nombreColumna"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> 
+                    </ul>
+                </span>
+            </form>
+        </div>
+        <footer class="pf-c-modal-box__footer">
+            <button class="pf-c-button pf-m-primary" wicket:id="guardar" 
+                    type="button" >
+                Guardar </button>
+            <button class="pf-c-button pf-m-secondary" wicket:id="cancelar" type="button">
+                Cancelar </button>
+        </footer>
+
+    </div>
+</wicket:panel>

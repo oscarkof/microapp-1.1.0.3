@@ -1,0 +1,23 @@
+<wicket:panel xmlns:wicket="http://wicket.apache.org">
+    <div wicket:id="uploadPanel">
+        <div wicket:id="feedback"></div>
+        <form wicket:id="form">
+
+            <label wicket:for="file" class="nk-file-upload pf-c-input-group__text 
+                   pf-m-plain pf-u-py-sm pf-u-px-md">
+                <div wicket:id="drop" class="custom-file-upload " >
+                    <i class="las la-file-upload la-2x"></i> &nbsp;
+                    <p>Arrastra un archivo aqu&iacute; o click para seleccionar</p>
+                </div>
+                <div wicket:id="inputlabel" > 
+                    <span wicket:id="fileLabel"></span> <i class="fas fa-file-upload "></i> 
+                </div>
+            </label> 
+            <input wicket:id="file" type="file" multiple="" />
+            <button wicket:id="ajaxSubmit" type="button" class="pf-c-button pf-m-plain"> 
+                <i class="fas fa-file-upload "></i> 
+            </button> 
+
+        </form>
+    </div>
+</wicket:panel>

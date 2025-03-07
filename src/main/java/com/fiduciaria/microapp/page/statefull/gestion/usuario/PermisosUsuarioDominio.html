@@ -1,0 +1,120 @@
+<html>
+    <body>
+    <wicket:panel>
+        <div class="pf-c-card pf-m-rounded  pf-u-pb-lg pf-u-px-md ">
+
+            <div class="pf-c-card__header ">
+                <h1 class="pf-u-font-size-2xl">
+                    <wicket:message key="gestion.usuario.opcion.permisos.header.label "></wicket:message>
+                </h1>
+            </div> 
+            <div class="pf-c-card__body">
+                <wicket:message key="gestion.usuario.opcion.permisos.descripcion.body"></wicket:message>
+            </div>
+
+            <div> 
+
+                <table class="pf-c-table pf-m-expandable pf-m-grid-lg pf-m-compact"
+                       role="grid"  >
+                    <thead>
+                        <tr role="row">
+                            <td class="pf-c-table__toggle" role="cell">
+                            </td>  
+                            <th  class="pf-m-width-30 pf-c-table__sort "
+                                 role="columnheader"
+                                 aria-sort="ascending"
+                                 scope="col" >
+                                <button class="pf-c-table__button">
+                                    <div class="pf-c-table__button-content">
+                                        <span class="pf-c-table__text">Usuario</span>
+                                    </div>
+                                </button>
+                            </th>
+                            <th class="pf-c-table__sort"
+                                role="columnheader" aria-sort="none"  scope="col" >
+                                <button class="pf-c-table__button">
+                                    <div class="pf-c-table__button-content">
+                                        <span class="pf-c-table__text">Descripci&oacute;n</span>
+                                    </div>
+                                </button>
+                            </th> 
+                            <th
+                                class="pf-c-table__sort"
+                                role="columnheader"
+                                aria-sort="none"
+                                scope="col"
+                                >
+                                <button class="pf-c-table__button">
+                                    <div class="pf-c-table__button-content">
+                                        <span class="pf-c-table__text">Correo</span>
+                                    </div>
+                                </button>
+                            </th>
+                            <th>
+                                <label>
+                                    Estado
+                                </label>
+                            </th>  
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <wicket:container wicket:id="listaUsuarios">
+                        <tbody  role="rowgroup" wicket:id="rowExpandable">
+                            <tr role="row">
+                                <td class="pf-c-table__toggle" role="cell">
+                                    <button wicket:id="toggleDetalles"
+                                            class="pf-c-button pf-m-plain pf-m-expanded" 
+                                            aria-label="Detalles"
+                                            aria-controls=""
+                                            aria-expanded="true"
+                                            >
+                                        <div class="pf-c-table__toggle-icon">
+                                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                        </div>
+                                    </button>
+                                </td>
+
+                                <td class="pf-c-table__check" role="cell">
+                                    <label>
+                                        <span wicket:id="usuario"></span>
+                                    </label>
+                                </td>
+                                <th role="columnheader" data-label="">
+                                    <span wicket:id="descripcion"></span>
+                                </th>
+                                <td role="cell" data-label="">
+                                    <span wicket:id="email"></span>
+                                </td>
+                                <td role="cell" data-label="">
+                                    <span wicket:id="estadoLabel" class="pf-c-label pf-m-red pf-m-outline">
+                                        <span wicket:id="estado" class="pf-c-label__content">Red</span>
+                                    </span>
+
+                                </td>
+                                <td role="cell" data-label="Action">
+                                    <a href="#">Link 1</a>
+                                </td>
+                                <td class="pf-c-table__action" role="cell">
+
+                                </td>
+                            </tr>
+
+                            <tr role="row" wicket:id="detallePermisosUsuario">
+                                <td></td> 
+                                <td role="cell" colspan="5" id="table-expandable-content1">
+                                    <div class="pf-c-table__expandable-row-content"  wicket:id="contenidoDetalle">
+                                    </div>
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </wicket:container>
+                </table>
+
+            </div>
+
+        </div>
+    </wicket:panel>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<wicket:panel >
+
+    <div wicket:id="seleccionNegocio">
+    </div>
+
+    <wicket:fragment wicket:id="vistaFideicomisos">
+
+        <div wicket:id="dataView">
+
+            <table class="pf-c-table pf-m-compact pf-m-grid-md"  role="grid"
+                   aria-label="Lista de Fideicomisos">
+                <thead>
+                    <tr role="row"> 
+                        <th role="columnheader"  scope="col"><wicket:message key="vista.lista.fideicomiso.header.codigotipo"></wicket:message></th>
+                <th role="columnheader"  scope="col"><wicket:message key="vista.lista.fideicomiso.header.codigosubtipo"></wicket:message> </th>
+                <th role="columnheader" scope="col"><wicket:message key="vista.lista.fideicomiso.header.codigo"></wicket:message>  </th>
+                <th role="columnheader"  scope="col"><wicket:message key="vista.lista.fideicomiso.header.nombre"></wicket:message> </th> 
+                <th role="columnheader"  scope="col"><wicket:message key="vista.lista.fideicomiso.header.etapa"></wicket:message> </th>  
+
+                </tr>
+
+                </thead>
+
+                <tbody role="rowgroup">
+                    <tr role="row" class="pf-m-hoverable" wicket:id="vistaFideicomisos"> 
+                        <td role="cell" data-label="Código Tipo" wicket:id="codigoTipo"></td>
+                        <td role="cell" data-label="Código Subtipo" wicket:id="codigoSubtipo">Not too sure</td>
+                        <td role="cell" data-label="Código" wicket:id="codigo">May 9, 2018</td>
+                        <td role="cell" data-label="Nombre Fideicomiso" wicket:id="nombreFideicomiso" >0556</td>
+                        <td role="cell" data-label="Etapa" wicket:id="etapa" >0556</td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td wicket:id="navigator" colspan="5"></td>
+                    </tr>
+
+                </tfoot>
+            </table>
+
+        </div>
+
+    </wicket:fragment>
+
+    <wicket:fragment wicket:id="vistaReferenciaUnicas">
+
+        <div wicket:id="dataViewRefUnicas">
+
+            <table class="pf-c-table pf-m-compact pf-m-grid-md"  role="grid"
+                   aria-label="Lista de Referencias Únicas">
+                <thead>
+                    <tr role="row"> 
+                        <th role="columnheader"  scope="col"><wicket:message key="vista.lista.referenciaunica.header.numeroreferencia"></wicket:message></th>
+                <th role="columnheader"  scope="col"><wicket:message key="vista.lista.referenciaunica.header.descripcion"></wicket:message> </th>
+                <th role="columnheader" scope="col"><wicket:message key="vista.lista.referenciaunica.header.tipoidentificacion"></wicket:message>  </th>
+                <th role="columnheader"  scope="col"><wicket:message key="vista.lista.referenciaunica.header.numeroidentificacion"></wicket:message> </th> 
+                </tr>
+                </thead>
+
+                <tbody role="rowgroup">
+                    <tr role="row" class="pf-m-hoverable" wicket:id="vistaListaReferenciaUnicas">
+
+                        <td role="cell" data-label="Número de Referencia" wicket:id="numeroReferencia"></td>
+                        <td role="cell" data-label="Descripción" wicket:id="descripcion">Not too sure</td>
+                        <td role="cell" data-label="Tipo de Identificación" wicket:id="tipoIdentificacion">May 9, 2018</td>
+                        <td role="cell" data-label="Número de Identificación" wicket:id="numeroIdentificacion" >0556</td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td wicket:id="navigator" colspan="4"></td>
+                    </tr>
+
+                </tfoot>
+            </table>
+
+        </div>
+
+    </wicket:fragment>
+
+</wicket:panel>

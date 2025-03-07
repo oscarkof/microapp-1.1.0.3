@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <div class="pf-c-card">
+        <div class="pf-c-card__header">
+            <div class="pf-c-card__title">
+                <h2 class="pf-c-title pf-m-lg">
+                    <span wicket:id="nombreDominio"></span>
+                </h2>
+            </div>
+        </div>
+        <div class="pf-c-card__body">
+            <p>
+                <span wicket:id="descripcion"></span>
+            </p>
+
+        </div>
+        <div class="pf-c-card pf-m- plain pf-m- expanded pf-u-m-md"  >
+            <div wicket:id="actionAdmin" class="pf-c-card__header"> 
+                <div class="pf-c-card__title" >
+                    <span class="pf-u-font-weigh t-light">ADMINISTRADORES</span> 
+                </div>
+                <div class="pf-c-card__actions pf-m-no-offset">
+                    <button wicket:id="agregarAdministrador" class="pf-c-button pf-m-link" type="button">
+                        <span class="pf-c-button__icon pf-m-start">
+                            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                        </span>
+                        Admin
+                    </button>
+                </div>
+            </div>
+            <div class="pf-c-card__expandable-content">
+                <div class="pf-c-card__body">
+                    <div wicket:id="adminDataView" class="pf-l-grid pf-m-gutter">
+                        <div wicket:id="vistaListaAdministradores" class="pf-l-grid pf-m-gutter">
+                            <div class="pf-l-grid__item pf-m-4-col-on-md">
+                                <div class="pf-l-flex pf-m-column-on-md pf-m-space-items-none-on-md
+                                     pf-m-justify-content-center-on-md pf-u-h-100-on-md">
+                                    <div class="pf-l-flex__item">
+                                        <b>
+                                            <span wicket:id="loginUsuario"></span>
+                                        </b>
+                                    </div>
+                                    <hr class="pf-c-divider pf-m-vertical pf-m-inset-sm pf-u-hidden-on-md"
+                                        />
+                                    <div class="pf-l-flex__item">
+                                        <span wicket:id="descripcionUsuario"> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pf-l-grid__item pf-m-8-col-on-md">
+                                <div class="pf-l-grid pf-m-gutter">
+                                    <div class="pf-l-grid__item pf-m-12-col">
+                                        <div
+                                            class="pf-l-flex pf-m-column pf-m-space-items-none pf-m-align-items-flex-end-on-md"
+                                            > <span><b>Fecha Creaci&oacute;n :  </b>
+                                                <span class="pf-l-flex__item" wicket:id="fechaCreacion">
+
+                                                </span> </span><br>
+                                            <span><b>Estado  :  </b>
+                                                <span class="pf-l-flex__item" wicket:id="estado">50C</span> 
+                                            </span>
+                                            <div class="pf-l-flex__item"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pf-c-card pf-m -plain pf-u-m-md">
+            <div class="pf-c-card__header"> 
+                <div class="pf-c-card__title">
+                    <span class="pf-u-font -weight-light">USUARIOS ADMINISTRADOS</span>
+                </div>
+            </div>
+            <div class="pf-c-card__expandable-content">
+                <div class="pf-c-card__body">
+                    <div  class="pf-l-grid pf-m-gutter">
+                        <div wicket:id="vistaListaUsuarios" class="pf-l-grid pf-m-gutter">
+                            <div class="pf-l-grid__item pf-m-4-col-on-md">
+                                <div class="pf-l-flex pf-m-column-on-md pf-m-space-items-none-on-md
+                                     pf-m-justify-content-center-on-md pf-u-h-100-on-md">
+                                    <div class="pf-l-flex__item">
+                                        <b>
+                                            <span wicket:id="loginUsuario"></span>
+                                        </b>
+                                    </div>
+                                    <hr class="pf-c-divider pf-m-vertical pf-m-inset-sm pf-u-hidden-on-md"
+                                        />
+                                    <div class="pf-l-flex__item">
+                                        <span wicket:id="descripcionUsuario"> </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pf-l-grid__item pf-m-8-col-on-md">
+                                <div class="pf-l-grid pf-m-gutter">
+                                    <div class="pf-l-grid__item pf-m-12-col">
+                                        <div
+                                            class="pf-l-flex pf-m-column pf-m-space-items-none pf-m-align-items-flex-end-on-md"
+                                            > <span><b>Fecha Creaci&oacute;n :  </b>
+                                                <span class="pf-l-flex__item" wicket:id="fechaCreacion">
+
+                                                </span> </span><br>
+                                            <span><b>Estado  :  </b>
+                                                <span class="pf-l-flex__item" wicket:id="estado">50C</span> 
+                                            </span>
+                                            <div class="pf-l-flex__item"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div wicket:id="seccionNegocios" class="pf-c-card pf-m- plain pf-u-m-md">
+            <div class="pf-c-card__header"> 
+                <div class="pf-c-card__title" >
+                    <span class="pf-u-font -weight-light">NEGOCIOS ADMINISTRADOS</span>
+
+                </div>
+                <!--div class="pf-c-card__actions pf-m-no-offset">
+                    <button class="pf-c-button pf-m-link" type="button">
+                        <span class="pf-c-button__icon pf-m-start">
+                            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                        </span>
+                        Negocio
+                    </button>
+                </div-->
+            </div>
+
+            <div class="pf-c-card__expandable-content">
+                <div class="pf-c-card__body">
+                    <div  class="pf-l-grid pf-m-gutter">
+                        <div wicket:id="vistaListaNegocios" class="pf-l-grid pf-m-gutter">
+                            <div class="pf-l-grid__item pf-m-12-col-on-md">
+                                <div class="pf-l-flex pf-m-column-on-md pf-m-space-items-none-on-md
+                                     pf-m-justify-content-center-on-md pf-u-h-100-on-md">
+                                    <div class="pf-l-flex__item">
+                                        <b>
+                                            <span wicket:id="codigoNegocio"></span>
+                                        </b>
+                                    </div>
+                                    <hr class="pf-c-divider pf-m-vertical pf-m-inset-sm pf-u-hidden-on-md"
+                                        />
+                                    <div class="pf-l-flex__item">
+                                        <span wicket:id="nombreNegocio"> </span> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <span wicket:id="navegador">[dataview navigator]</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</wicket:panel>

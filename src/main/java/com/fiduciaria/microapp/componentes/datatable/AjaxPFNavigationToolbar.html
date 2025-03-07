@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<wicket:panel>
+    <div wicket:id="navigationToolbar" class="pf-c-toolbar pf-u-pb-0">
+        <div class="pf-c-toolbar__content">
+            <div class="pf-c-toolbar__content-section">
+
+                <div wicket:id="filterSeccion">
+
+                </div>
+
+                <div class="pf-c-toolbar__item pf-m-pagination ">
+                    <div class="pf-c-pagination" aria-label="Element pagination"> 
+                        <div class="pf-c-options-menu">
+                            <div class="pf-c-options-menu__toggle pf-m-text pf-m-plain">
+                                <span class="pf-c-options-menu__toggle-text">
+                                    <b><span wicket:id="mostrandoRango"></span></b>&nbsp;de&nbsp;
+                                    <b><span wicket:id="totalRegistros"> </span></b>
+                                </span>
+                                <button class="pf-c-options-menu__toggle-button" id="toolbar-stacked-collapsed-example-pagination-options-menu-toggle" aria-haspopup="listbox" aria-expanded="false" aria-label="Items per page">
+                                    <span class="pf-c-options-menu__toggle-button-icon">
+                                        <i class="las la-caret-down" aria-hidden="true"></i>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+                        <nav class="pf-c-pagination__nav" aria-label="Pagination">
+                            <button wicket:id="fistPage" class="pf-c-button pf-m-plain" type="button" aria-label="ir a primera pagina" >
+                                <i class="las la-angle-double-left" aria-hidden="true"></i>
+                            </button>
+                            <button wicket:id="previousPage" class="pf-c-button pf-m-plain" type="button" aria-label="pagina anterior" >
+                                <i class="las la-angle-left" aria-hidden="true"></i>
+                            </button>
+                            <div class="pf-c-pagination__nav-page-select" aria-label=" ">
+                                <input class="pf-c-form-control" wicket:id="currentPage" aria-label="Current page" 
+                                       type="number" value="1" />
+                                <span aria-hidden="true">de <span wicket:id="totalPages"></span></span>
+                            </div>
+                            <button wicket:id="nextPage" class="pf-c-button pf-m-plain" type="button" aria-label="Go to next page">
+                                <i class="las la-angle-right" aria-hidden="true"></i>
+                            </button>
+                            <button class="pf-c-button pf-m-plain" wicket:id="lastPage" type="button" aria-label="ir a la última página">
+                                <i class="las la-angle-double-right" aria-hidden="true"></i>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:panel>
+

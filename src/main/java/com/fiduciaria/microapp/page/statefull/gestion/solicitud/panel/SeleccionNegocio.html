@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+
+    <div wicket:id="filterInputsPane" class="pf-c-form pf-c-card__body">
+        <form wicket:id="form"> 
+            <select wicket:id="tipoNegocio" ></select> 
+
+        </form> 
+    </div> 
+
+    <div wicket:id="seccionAccion" class="pf-c-card pf-m -plain pf-m-rounded pf-l-grid__item pf-m-12-col-on-sm 
+         pf-m-12-col-on-md
+         pf-m-9-col-on-lg pf-m-8-col-on-xl">
+        <div class="pf-c-toolbar" wicket:id="toolbarFiltro"> 
+            <form wicket:id="filtroForm">
+                <div class="pf-c-toolbar__content">
+                    <div class="pf-c-toolbar__content-section">
+                        <div class="pf-c-toolbar__item"> 
+
+                            <div class="pf-c-input-group" aria-label="Filtro busqueda" role="group">
+
+                                <div class="pf-c-text-input-group">
+                                    <div class="pf-c-text-input-group__main pf-m-icon">
+                                        <span class="pf-c-text-input-group__text">
+                                            <span class="pf-c-text-input-group__icon">
+                                                <i class="fas fa-fw fa-search"></i>
+                                            </span>
+                                            <input wicket:id="filtroCodigo"
+                                                   class="pf-c-text-input-group__text-input"
+                                                   type="text" 
+                                                   placeholder="Filtrar por códido o número"
+                                                   aria-label=" " />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pf-c-toolbar__item">
+
+                            <div class="pf-c-input-group" aria-label="" role="group">
+
+                                <div class="pf-c-text-input-group">
+                                    <div class="pf-c-text-input-group__main pf-m-icon">
+                                        <span class="pf-c-text-input-group__text">
+                                            <span class="pf-c-text-input-group__icon">
+                                                <i class="fas fa-fw fa-search"></i>
+                                            </span>
+                                            <input wicket:id="filtroNombre" 
+                                                   class="pf-c-text-input-group__text-input"
+                                                   type="text" 
+                                                   placeholder="Filtrar por nombre"
+                                                   aria-label=" "  />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pf-c-toolbar__item"> 
+                            <a wicket:id="filtroLink" 
+                               class="pf-c-button pf-m-plain"
+                               type="button"
+                               aria-label="Mostrar filtros"
+                               aria-expanded="false"
+                               aria-controls=" "  >
+                                <i class="fas fa-filter" aria-hidden="true"></i>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <wicket:container wicket:id="fragmentPanel"></wicket:container>
+    </div> 
+
+    <wicket:fragment wicket:id="seleccionNegocioFragment">
+        <wicket:container wicket:id="vistaNegocio"></wicket:container>
+    </wicket:fragment>
+
+</wicket:panel>

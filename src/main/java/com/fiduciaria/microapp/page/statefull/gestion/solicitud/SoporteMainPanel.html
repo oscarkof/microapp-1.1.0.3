@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <div class="pf-c-card pf-m- plain pf-m-rounded pf-l-grid" >
+
+        <div
+            class="pf-c-card pf-m-plain pf-m-rounded pf-u-background-color-100
+            pf-l-grid__item pf-m-12-col-on-sm 
+            pf-m-12-col-on-md
+            pf-m-12-col-on-lg pf-m-12-col-on-xl
+            "
+            tabindex="0"> 
+            <div class="pf-c-card__body pf-u-font-size-2xl pf-u-py-sm ">
+                <wicket:message key="soporte.clientes.panel.titulo.label"></wicket:message> 
+            </div>
+            <div class="pf-c-card__body pf-u-pb-sm">
+                <wicket:message key="soporte.clientes.panel.titulo.body.message"></wicket:message>
+            </div>
+        </div>
+
+        <div wicket:id="seleccionNegocioContenedor" class="pf-l-grid__item pf-m-12-col-on-sm 
+             pf-m-12-col-on-md
+             pf-m-7-col-on-lg pf-m-6-col-on-xl">
+            <div wicket:id="panelSeleccionNegocio"></div>
+        </div>
+
+        <div wicket:id="formularioContenedor" class="pf-l-grid__item pf-m-12-col-on-sm 
+             pf-m-12-col-on-md
+             pf-m-9-col-on-lg pf-m-8-col-on-xl">
+
+
+            <wicket:container wicket:id="formularioSoporteCliente"/>
+        </div>
+
+    </div>
+</wicket:panel>

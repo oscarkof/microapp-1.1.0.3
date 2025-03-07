@@ -1,0 +1,77 @@
+<wicket:panel>
+    <div class="pf-c-card pf-m -display-lg pf-m-plain pf-m-plain"  >
+         
+        <div class="pf-c-card__body" >
+            <form class="pf-c-form " wicket:id="actaulizarUsuarioRefForm">
+                <div class="pf-l-grid pf-m-all-6-col-on-sm pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl">
+                    <div  class="pf-l-grid__item pf-m-8-col-on-sm pf-m-4-col-on-lg pf-m-6-col-on-xl"  >
+                        <select wicket:id="perfilUsuario"></select>
+                    </div>
+                    <div  wicket:id="seccionPermisoReferencias" class="pf-l-grid__item pf-m-4-col-on-sm pf-m-8-col-on-lg pf-m-6-col-on-xl pf-u-py-lg pf-u-px-md" >
+                        <button class="pf-c-button pf-m-link" type="button" wicket:id="agregarFerenciaUnica">
+                            <span class="pf-c-button__icon pf-m-start">
+                                <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                            </span>
+                            Agregar Referencia
+                        </button>
+                        <div>
+                            <div wicket:id="instruccionesPermiso" class="pf-u-py-md">Daras permisos sobre las siguientes referencias. </div>
+                            <span class="pf-c-label pf-m-blue" wicket:id="referenciasNuevasDataList">
+                                <span class="pf-c-label__content">
+                                    <span class="pf-c-label__icon">
+                                        <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                                    </span>
+                                    <span wicket:id="descripcionReferencia"></span>
+                                </span>
+                                <button class="pf-c-button pf-m-plain" type="button" aria-label="Remove"  wicket:id="remove">
+                                    <i class="fas fa-times" aria-hidden="true"></i>
+                                </button>
+                            </span>
+                        </div>
+
+                    </div> 
+
+                </div>
+                <div class="pf-c-form_ _group pf-m-action">
+                    <div class="pf-c-form__actions">
+                        <button class="pf-c-button pf-m-primary" type="button" wicket:id="actualizar">Actualizar</button> 
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="pf-c-card__body" >
+            <table class="pf-c-table" wicket:id="referenciasDataTable">
+                <thead>
+                    <tr class="pf-m-nowrap">
+                        <th># Referencia</th>
+                        <th> Descripcion</th>
+                        <th>T. Doc</th>
+                        <th> Identificaci&oacute;n</th>
+                        <th>Tipo </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr wicket:id="listaReferenciasUnicasPermitidas">
+                        <td>
+                            <span wicket:id="numeroReferencia"></span>
+                        </td>
+                        <td>
+                            <span wicket:id="descripcionReferencia"></span>
+                        </td>
+                        <td>
+                            <span wicket:id="tipoIdentificacion"></span>
+                        </td>
+                        <td>
+                            <span wicket:id="identificacion"></span>
+                        </td>
+                        <td>
+                            <span wicket:id="tipoReferencia"></span>
+                        </td> 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pf-c-card__footer"></div>
+    </div>
+</wicket:panel>

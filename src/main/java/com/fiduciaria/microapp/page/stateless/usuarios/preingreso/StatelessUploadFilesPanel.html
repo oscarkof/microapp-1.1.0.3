@@ -1,0 +1,79 @@
+<wicket:panel>
+    <div class="pf-c-card__body">
+        <div wicket:id="feedback" id="feedback"></div>
+        <div class="pf-c-multiple-file-upload">
+            <div class="pf-c-multiple-file-upload__main"> 
+                <form wicket:id="simpleUpload" id="simpleUpload">
+                    <div class="pf-c-multiple-file-upload__upload pf-u-text-align-left"> 
+                        <div class="pf-c-input-group"> 
+                            <label wicket:for="fileInput" class="pf-c-form-control"   > 
+                                Click para seleccionar archivo(s)  
+                            </label>
+
+                            <input type="file" wicket:id="fileInput" id="fileInput" multiple="" hidden /> 
+                            <button
+                                class="pf-c-button pf-m-secondary"  wicket:id="submitUpload" id="submitUpload"
+                                type="submit"  aria-label="cargar" >Agregar 
+                                <i class="fas fa-file-upload" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="pf-c-multiple-file-upload__title pf-u-text-align-left"> 
+                        <div class="pf-c-multiple-file-upload__title-text "> 
+                            <div class="pf-c-multiple-file-upload__title-text-separator">
+                                <div wicket:id="dataviewSelected"  id="dataviewSelected"> 
+                                    <div class="pf-c-label-group  pf-m-category">
+                                        <div class="pf-c-label-group__main"> 
+                                            <ul class="pf-c-label-group__list" role="list"   >
+                                                <li wicket:id="fileDescList"  id="fileDescList" class="pf-c-label-group__list-item">
+                                                    <span class="pf-c-label pf-m-blue pf-m-outline">
+                                                        <span class="pf-c-label__content"> 
+                                                            <span  wicket:id="fileDesc" id="fileDesc" class="pf-c-chip__text"> </span>
+                                                        </span> 
+                                                    </span>
+                                                </li> 
+                                            </ul>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div wicket:id="dataview"  id="dataview">
+
+            <div class="pf-c-chip-group pf-m-category">
+                <div class="pf-c-chip-group__main">
+                    <span
+                        class="pf-c-chip-group__label"
+                        aria-hidden="true" >Archivos cargados</span>
+                    <ul class="pf-c-chip-group__list"
+                        role="list"
+                        aria-labelledby="chip-group-with-categories-label"
+                        >
+                        <li wicket:id="fileList" id ="fileList" class="pf-c-chip-group__list-item">
+                            <div class="pf-c-chip" style="--pf-c-chip__text--MaxWidth: 200px;">
+                                <span    wicket:id="file"id="file"
+                                         class="pf-c-chip__text" > </span>
+                                <button wicket:id="delete" id="delete" class="pf-c-button pf-m-plain"
+                                        type="button" aria-label="Remove" >
+                                    <i class="las la-times" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</wicket:panel>

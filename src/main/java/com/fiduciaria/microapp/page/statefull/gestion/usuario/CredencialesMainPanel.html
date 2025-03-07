@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<wicket:panel>
+
+    <div class="pf-c-card pf-m-plain pf-l-grid__item
+         pf-m-12-col-on-sm
+         pf-m-8-col-on-md
+         pf-m-6-col-on-lg
+         pf-m-6-col-on-xl " >
+
+        <div class="pf-c-card__header pf-u-font-size-xl">
+            <wicket:message key="gestion.usuarios.credenciales.cambiar.header.label" /> 
+        </div>
+        <div wicket:id="alertaError" class="pf-c-alert pf-m-danger" aria-label="Danger alert">
+            <div class="pf-c-alert__icon">
+                <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+            </div>
+            <p class="pf-c-alert__title">
+                <span class="pf-screen-reader">Danger alert:</span>
+                No podemos proceder con la petici&oacute;n por las siguientes razones: 
+            </p>
+            <div class="pf-c-alert__description">
+                <span wicket:id="mensaje"></span>
+            </div>
+        </div> 
+
+        <div wicket:id="alertaExito" class="pf-c-alert pf-m-success" aria-label="Success alert">
+            <div class="pf-c-alert__icon">
+                <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+            </div>
+            <p class="pf-c-alert__title">
+                <span class="pf-screen-reader">Success alert:</span>
+                Cambiamos exitosamente tus credenciales.
+            </p>
+            <div class="pf-c-alert__description">
+                <span wicket:id="mensaje"></span>
+            </div>
+        </div>
+        <div class="pf-c-card__body">
+            <form class="pf-c-form" wicket:id="formCambioPassword"  
+                  style="--pf-c-form--GridGap: 0.3rem;">
+
+                <div class="pf-c-form__group">
+                    <div class="pf-c-form__group-label">
+                        <label class="pf-c-form__label" for="form-vertical-name">
+                            <span class="pf-c-form__label-text">Nombre Usuario</span>&nbsp; 
+                        </label>&nbsp; 
+                    </div>
+                    <div class="pf-c-form__group-control">
+                        <div type="text" class="pf-c-form-control" wicket:id="usuario"></div>
+                    </div>
+                </div>
+
+
+                <input type="password" wicket:id="passActual" autocomplete="off" />
+                <input type="password" wicket:id="passNuevo" autocomplete="off" />
+                <input type="password" wicket:id="passConfirmar" autocomplete="off" />
+
+                <div class=" pf-m-action">
+                    <div class="pf-c-form__actions">
+                        <button class="pf-c-button pf-m-primary" 
+                                type="submit" wicket:id="submitForm">Confirmar</button>
+                        <button class="pf-c-button pf-m-secondary 
+                                pf-m-danger pf-m-link" type="reset">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</wicket:panel>

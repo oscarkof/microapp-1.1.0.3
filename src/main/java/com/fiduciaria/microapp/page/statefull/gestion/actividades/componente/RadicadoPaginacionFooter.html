@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <div class="pf-c-pagination pf-m-bottom">
+        <div class="pf-c-options-menu pf-m-top">
+            <button class="pf-c-options-menu__toggle pf-m-text pf-m-plain" type="button" id="{{page--id}}-pagination-options-menu-bottom-example-toggle" aria-haspopup="listbox" aria-expanded="false">
+                <span class="pf-c-options-menu__toggle-text">
+                    <b>1 - 10</b>&nbsp;of&nbsp;
+                    <b>36</b>
+                </span>
+                <div class="pf-c-options-menu__toggle-icon">
+                    <i class="fas fa-caret-down" aria-hidden="true"></i>
+                </div>
+            </button>
+            <ul class="pf-c-options-menu__menu pf-m-top" aria-labelledby="{{page--id}}-pagination-options-menu-bottom-example-toggle" hidden="">
+                <li>
+                    <button class="pf-c-options-menu__menu-item" type="button">5 per page</button>
+                </li>
+                <li>
+                    <button class="pf-c-options-menu__menu-item" type="button">
+                        10 per page
+                        <div class="pf-c-options-menu__menu-item-icon">
+                            <i class="fas fa-check" aria-hidden="true"></i>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <button class="pf-c-options-menu__menu-item" type="button">20 per page</button>
+                </li>
+            </ul>
+        </div>
+        <nav class="pf-c-pagination__nav" aria-label="Pagination">
+            <div class="pf-c-pagination__nav-control pf-m-first">
+                <button class="pf-c-button pf-m-plain" type="button" disabled="" aria-label="Go to first page">
+                    <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="pf-c-pagination__nav-control pf-m-prev">
+                <button class="pf-c-button pf-m-plain" type="button" disabled="" aria-label="Go to previous page">
+                    <i class="fas fa-angle-left" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="pf-c-pagination__nav-page-select">
+                <input class="pf-c-form-control" aria-label="Current page" type="number" min="1" max="4" value="1">
+                <span aria-hidden="true">of 4</span>
+            </div>
+            <div class="pf-c-pagination__nav-control pf-m-next">
+                <button class="pf-c-button pf-m-plain" type="button" aria-label="Go to next page">
+                    <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="pf-c-pagination__nav-control pf-m-last">
+                <button class="pf-c-button pf-m-plain" type="button" aria-label="Go to last page">
+                    <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </nav>
+    </div>
+</wicket:panel>

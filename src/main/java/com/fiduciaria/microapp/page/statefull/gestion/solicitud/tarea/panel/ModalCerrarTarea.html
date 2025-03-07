@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <div class="pf-c-modal-box pf-m-lg" 
+         role="dialog" aria-modal="true"
+         aria-labelledby="modal-title" 
+         aria-describedby="modal-description">
+        <button wicket:id="cerrarModal" class="pf-c-button pf-m-plain" type="button" aria-label="Close">
+            <i class="fas fa-times" aria-hidden="true"></i>
+        </button>
+        <header class="pf-c-modal-box__header">
+            <h1 class="pf-c-modal-box__title" >
+                <span wicket:id="tituloTarea"></span></h1>
+            <div class="pf-c-modal-box__description">
+                <div class="pf-c-content">
+                    <!--p>La tarea asignada se mostrará en el detalle de la solicitud.</p--> 
+                </div>
+            </div>
+        </header>
+
+        <div class="pf-c-modal-box__body"> 
+
+            <div class="pf-l-grid pf-m-all-6-col-on-sm pf-m-all-4-col-on-md 
+                 pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl pf-m-gutter"  >
+                <div class="pf-l-grid__item pf-m-8-col-on-sm
+                     pf-m-4-col-on-lg pf-m-6-col-on-xl"  > 
+
+                    <form class=" pf-c-form pf-m-horizontal" 
+                          novalidate wicket:id="actualizaTareForm"> 
+                        <div class="pf-c-form__group -name">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" 
+                                       for="form-demo-horizontal">
+                                    <span class="pf-c-form__label-text">
+                                        Asignado por :</span>&nbsp;
+                                    <span class="pf-c-form__label-required" 
+                                          aria-hidden="true">&#42;</span>
+                                </label>
+                            </div>
+                            <div class="pf-c-form__group-control">
+
+                                <span class="pf-c-form-control"  
+                                      aria-label=" "> 
+                                    <span wicket:id="nombreUsuarioAsigna"></span>
+                                </span> 
+
+                            </div>
+                        </div>
+
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" wicket:for="listaEstadoTarea">
+                                    <span class="pf-c-form__label-text">Estado</span></label>
+                            </div>
+                            <div class="pf-c-form__group-control">
+                                <select wicket:id="listaEstadoTarea" class="pf-c-form-control"   >
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="pf-c-form__group">
+                            <div class="pf-c-form__group-label">
+                                <label class="pf-c-form__label" 
+                                       wicket:for="observacionTarea">
+                                    <span class="pf-c-form__label-text">Notas</span></label>
+                            </div>
+                            <div class="pf-c-form__group-control">
+                                <textarea wicket:id="observacionTarea" rows="5"
+                                          class="pf-c-form-control pf-m-resize-vertical" >
+
+                                </textarea>
+                            </div>
+                        </div>
+
+                    </form></div>
+                <div class="pf-l-grid__item pf-m-4-col-on-sm
+                     pf-m-8-col-on-lg pf-m-6-col-on-xl" >
+
+                    <dl class="pf-c-description-list pf-m-2-col">
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Negocio</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text" >
+                                    <span wicket:id="codigoNegocio"></span> - 
+                                    <span wicket:id="nombreNegocio"></span> 
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Tipo Solicitud</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="tipoSolicitud"></span>
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Nombres</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="nombres" ></span>
+
+                                </div>
+                            </dd> 
+                        </div>
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Apellidos</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="apellidos"></span>
+                                </div>
+                            </dd>
+                        </div>
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Celular</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="numeroCelular"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Direcci&oacute;n</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="direccionSolicita"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Direcci&oacute;n correo</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="correoSolicita"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Rol</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="rol"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Rol Fideicomiso</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="rolFideicomiso"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Rol Fideicomiso</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="rolFideicomisoOtro"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Condiciones Manejo</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="condiManejo"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">Condiciones Manejo Otro</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="condiManejoRolcargaOtra"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+
+
+                        <div class="pf-c-description-list__group">
+                            <dt class="pf-c-description-list__term">
+                                <span class="pf-c-description-list__text">
+                                    Condiciones de los usuarios autorizadores 
+                                    de las operaciones en la plataforma</span>
+                            </dt>
+                            <dd class="pf-c-description-list__description">
+                                <div class="pf-c-description-list__text">
+                                    <span wicket:id="conUsrAuthz"></span>
+                                </div>
+                            </dd>
+                        </div>
+
+                    </dl>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <footer class="pf-c-modal-box__footer">
+            <button wicket:id ="guardarTarea" class="pf-c-button pf-m-primary" type="button">Guardar</button>
+            <button wicket:id="cancelarBtn" class="pf-c-button pf-m-link" type="button">Cancelar</button>
+        </footer>
+
+    </div>
+</wicket:panel>

@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<wicket:extend> 
+    <div class="pf-l-grid pf-m-all-6-col-on-sm 
+         pf-m-all-4-col-on-md pf-m-all-2-col-on-lg 
+         pf-m-all-1-col-on-xl">
+        <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-1-col-on-lg pf-m-3-col-on-xl"></div>
+        <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-10-col-on-lg pf-m-6-col-on-xl">
+
+            <div
+                class="pf-c-card pf-m-selectable-raised pf-m-selected-raised
+                pf-m-plain pf-m-rounded  pf-m-display-lg pf-u-my-md pf-u-background-color-100"
+                tabindex="0">
+                <div class="pf-c-card__title ">
+
+                </div>
+                <div class="pf-c-card__body pf-u-font-size-3xl pf-m-wrap">
+                    <wicket:message key="page.titulo.label"></wicket:message> 
+                </div>
+                <div class="pf-c-card__body">
+                    <wicket:message key="page.titulo.body.message"></wicket:message>
+                </div> 
+            </div>
+
+            <div wicket:id="notificacion" class="pf-c-alert pf-m-info" aria-label="Alerta Informativa">
+                <div class="pf-c-alert__icon">
+                    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                </div>
+                <p class="pf-c-alert__title">
+                    <span class="pf-screen-reader">Info alert:</span>
+                    Tu solicitud ha sido guardada.
+                </p>
+                <div class="pf-c-alert__description pf-u-font-size-lg">
+                    <p>Hemos recibido tu solicitud de forma exitosa. Un asesor se encargará de atenderla lo más pronto posible.
+                    </p>
+                </div>
+            </div>
+
+            <div wicket:id="error" class="pf-c-alert pf-m-danger" aria-label="Alerta Error">
+                <div class="pf-c-alert__icon">
+                    <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+                </div>
+                <p class="pf-c-alert__title">
+                    <span class="pf-screen-reader">Alerta de fallo:</span>
+                    Tu solicitud no ha sido guardada. Surgió un evento inesperado.
+                </p>
+                <div class="pf-c-alert__description pf-u-font-size-lg">
+                    <p>Rep&oacute;rtanos este evento para poder solucionarlo.</p>
+                </div>
+            </div>
+
+            <section class="pf-c-card pf-m-plain pf-m-rounded pf-u-p-lg"  >
+                <span wicket:id="respuesta" style="color:#cccccc;"></span>
+            </section>
+
+        </div>
+        <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-1-col-on-lg pf-m-3-col-on-xl"></div>
+    </div>
+
+
+</wicket:extend>

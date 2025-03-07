@@ -1,0 +1,383 @@
+<wicket:panel> 
+    <section
+        class="pf-c-tab-content" role="tabpanel" tabindex="0"  >
+        <div class="pf-c-tab-content__body">
+
+            <button wicket:id="guardarCondicionesManejo" type="button" class="pf-c-button pf-m-primary">Guardar Condiciones</button>
+            <br>
+            <ul class="pf-c-alert-group" wicket:id="alertasGrupo">
+                <li wicket:id="vistaListaAlertas" class="pf-c-alert-group__item">
+                    <div wicket:id="alerta" class="pf-c-alert pf-m-inline pf-m-success" aria-label="Success alert">
+                        <div class="pf-c-alert__icon">
+                            <i wicket:id="alertaicono" aria-hidden="true"></i>
+                        </div>
+                        <p class="pf-c-alert__title">
+                            <span class="pf-screen-reader">:</span>
+                            <span wicket:id="tituloalerta"></span>
+                        </p>
+                    </div>
+                </li> 
+            </ul>
+
+            <div wicket:id="fragmentPanel"> 
+                <div wicket:id="content"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <wicket:fragment wicket:id="condicionesNegocioFragment">
+
+        <div class="pf-c-card pf-m-compact">
+            <div class="pf-c-card__header">
+                <h1 class="pf-c-title pf-m-lg" >Agregar Condiciones de negocio</h1> 
+            </div> 
+            <div class="pf-c-card__body">
+                <form class="pf-c-form" wicket:id="formCondicionesNegocio">
+                    <div class="pf-c-card"> 
+                        <div class="pf-c-card__body">
+                            <div wicket:id="generales" class="pf-l-grid pf-m-gutter pf-m-all-6-col-on-sm  
+                                 pf-m-all-6-col-on-md  pf-m-all-4-col-on-lg">
+                                <input type="text" wicket:id="numeroFirmas">
+                                <input type="text" wicket:id="numeroEscritura"> 
+                            </div>
+                            <div wicket:id="usuarioTipo" class="pf-l-grid pf-m-gutter  pf-m-all-4-col">
+                                <div class="pf-l-grid__item"> 
+                                    <div class="pf-c-form__group">
+                                        <div class="pf-c-form__group-label"><label class="pf-c-form__label" for="form-vertical-name">
+                                                <span class="pf-c-form__label-text">Login Usuario
+                                                </span>&nbsp;<span class="pf-c-form__label-required" aria-hidden="true">&#42;</span>
+                                            </label>&nbsp;<span
+                                                class="pf-c-form__group-label-help"
+                                                role="button"
+                                                type="button"
+                                                tabindex="0"
+                                                ><i class="pficon pf-icon-help" aria-hidden="true"></i></span>
+                                        </div>
+                                        <div class="pf-c-form__group-control">
+                                            <div class="pf-c-input-group">
+                                                <input type="text" class="pf-c-form-control" wicket:id="loginUsuario" readonly="">
+                                                <button wicket:id="abrirModalUsuarios"
+                                                        class="pf-c-button pf-m-control"
+                                                        type="button"
+                                                        aria-label="Popover for input"
+                                                        >
+                                                    <i class="fas fa-window-restore" aria-hidden="true"></i>
+                                                </button>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="pf-l-grid__item"><select wicket:id="tipoFirma"></select> </div>
+                                <div class="pf-l-grid__item">
+                                    <div class="pf-c-form__group-label">
+                                        <label class="pf-c-form__label">
+                                            <span class="pf-c-form__label-text">&nbsp;&nbsp;</span>
+                                        </label>
+                                    </div>
+                                    <button class="pf-c-button pf-m-link" wicket:id="agregarUsuarioTipo" type="button">
+                                        <span class="pf-c-button__icon pf-m-start">
+                                            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                                        </span>
+                                        Agregar
+                                    </button>
+                                </div> 
+                            </div>
+                            <div wicket:id="condiciones" class="pf-l-grid pf-m-gutter  pf-m-all-2-col"> 
+                                <div class="pf-l-grid__item">
+                                    <select wicket:id="codTipoCondicion"></select>
+                                </div>
+                                <div class="pf-l-grid__item">
+                                    <select wicket:id="fijoVariable"></select>
+                                </div>
+                                <div class="pf-l-grid__item">
+                                    <input type="text" wicket:id="numeroFirmasRequeridas">
+                                </div>
+                                <div class="pf-l-grid__item">
+                                    <input type="text" wicket:id="valorInicialAprobar">
+
+                                </div>
+                                <div class="pf-l-grid__item">
+                                    <input type="text" wicket:id="valorFinalAprobar">
+
+                                </div>
+                                <div class="pf-l-grid__item">
+                                    <select wicket:id="variableSN"></select> 
+                                </div>
+
+                                <div class="pf-l-grid__item">
+                                    <select wicket:id="savedSN"></select> 
+                                </div>
+                                <div class="pf-l-grid__item">
+                                    <select  wicket:id="modo"></select> 
+                                </div> 
+                                <div class="pf-l-grid__item">
+                                    <div class="pf-c-form__group-label">
+                                        <label class="pf-c-form__label">
+                                            <span class="pf-c-form__label-text">&nbsp;&nbsp;</span>
+                                        </label>
+                                    </div>
+                                    <button wicket:id="agregarEscrituraFirmaCondicion" class="pf-c-button pf-m-link" type="button">
+                                        <span class="pf-c-button__icon pf-m-start">
+                                            <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                                        </span>
+                                        Agregar
+                                    </button>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>     
+                </form>
+
+                <div wicket:id="seccionDataCondicionTipo" class=" pf-l-grid pf-m-gutter pf-m-all-12-col-on-sm" >
+                    <div>
+                        <span wicket:id="descripcionValidacionCondiciones"></span>
+                    </div>
+                    <form class="pf-c-form" wicket:id="formCondicionTipo">
+                        <div class="pf-c-card"> 
+                            <div class="pf-c-card__body">
+                                <div class="pf-l-grid pf-m-gutter  pf-m-all-2-col">  
+                                    <div class="pf-l-grid__item">
+                                        <div class="pf-c-form__group">
+                                            <div class="pf-c-form__group-label">
+                                                <label class="pf-c-form__label" >
+                                                    <span class="pf-c-form__label-text">
+                                                        Código Tipo condición 
+                                                    </span>
+                                                </label> 
+                                            </div>
+                                            <div class="pf-c-form__group-control">
+                                                <div class="pf-c-form-control" wicket:id="codigoTipoCondicion"></div> 
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <select wicket:id="secuencialCondicion"></select>
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <select wicket:id="tipo"></select>
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <input wicket:id="numeroFirmas" type="text"></input>
+                                        <span wicket:id="numeroFirmasError"></span>
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <div class="pf-c-form__group-label">
+                                            <label class="pf-c-form__label">
+                                                <span class="pf-c-form__label-text">&nbsp;&nbsp;</span>
+                                            </label>
+                                        </div>
+                                        <button wicket:id="agregarEscrituraCondicionTipo" class="pf-c-button pf-m-link" type="button">
+                                            <span class="pf-c-button__icon pf-m-start">
+                                                <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                                            </span>
+                                            Agregar
+                                        </button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div wicket:id="seccionDataConceptoUsuarioTipo" class=" pf-l-grid pf-m-gutter pf-m-all-12-col-on-sm pf-m-all-12-col-on-md
+                     pf-m-all-12-col-on-lg pf-m-all-12-col-on-xl pf-u-py-lg" >
+                    <div>
+                        <span wicket:id="descripcionValidacionConceptoUsuarioTipo"></span>
+                    </div>
+                    <form class="pf-c-form" wicket:id="formConceptoUsuarioTipo">
+                        <div class="pf-c-card"> 
+                            <div class="pf-c-card__body">
+                                <div  class="pf-l-grid pf-m-gutter  pf-m-all-3-col"> 
+                                    <div class="pf-l-grid__item">
+                                        <select wicket:id="secuencialXConceptoUsuarioTipo"></select>
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <select wicket:id="escrituraUsuarioTipo"></select>
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <select wicket:id="aplicaSN"></select>
+                                    </div>
+                                    <div class="pf-l-grid__item">
+                                        <div class="pf-c-form__group-label">
+                                            <label class="pf-c-form__label">
+                                                <span class="pf-c-form__label-text">&nbsp;&nbsp;</span>
+                                            </label>
+                                        </div>
+                                        <button wicket:id="agregarConceptoUsuarioTipo" class="pf-c-button pf-m-link" type="button">
+                                            <span class="pf-c-button__icon pf-m-start">
+                                                <i class="fas fa-plus-circle" aria-hidden="true"></i>
+                                            </span>
+                                            Agregar
+                                        </button>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div wicket:id="seccionDataGlobal" class=" pf-l-grid pf-m-gutter pf-m-all-12-col-on-sm pf-m-all-4-col-on-md
+                     pf-m-all-3-col-on-lg pf-m-all-3-col-on-xl pf-u-py-lg" >
+                    <h1 class="pf-c-title pf-m-lg pf-m-12-col-on-sm pf-m-12-col-on-lg pf-m-12-col-on-xl">Usa el n&uacute;mero de escritura interno del negocio. </h1>
+                    <div>
+                        <strong>N&uacute;mero de escritura: &nbsp;&nbsp;</strong>  <span wicket:id="numeroEscrituraGeneral"></span>
+                    </div>
+                    <div>
+                        <strong>N&uacute;mero total de firmas:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><span wicket:id="numeroFirmasGeneral"></span> 
+                    </div>
+
+                </div>
+
+                <div class=" pf-l-grid pf-m-gutter pf-m-all-12-col-on-sm pf-m-all-12-col-on-md
+                     pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl pf-u-py-lg" >
+                    <div class="pf-c-card pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl" >  
+                        <div class="pf-c-card__header"> 
+                            <h1 class="pf-c-title pf-m-lg" > Usuario Tipo  </h1>
+                        </div>
+                        <div class="pf-c-card__body">
+                            <table wicket:id="escrituraUsuarioTipoDataView" class="pf-c-table pf-m-compact pf-m-grid-md pf-m-no-border-rows" >
+                                <thead>
+                                    <tr role="row" class="pf-m-wrap">
+                                        <th role="columnheader" scope="col">Login Usuario</th>
+                                        <th role="columnheader" scope="col">Tipo</th>
+                                    </tr>
+                                </thead> 
+                                <tbody role="rowgroup"> 
+                                    <tr wicket:id="listViewEscrituraUsuarioTipo" role="row">  
+                                        <td role="cell" wicket:id="loginUsuario" data-label=" "> </td>
+                                        <td role="cell" wicket:id="tipo" data-label=" "> </td> 
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pf-c-card__footer">
+                            Usa el n&uacute;mero de escritura interno del negocio. N&uacute;mero de firmas totales a ingresar en el negocio
+                            debe coincidir con los registros de esta tabla 
+                        </div> 
+                    </div>
+                    <div class="pf-c-card pf-l-grid__item pf-m-12-col-on-sm pf-m-9-col-on-lg pf-m-9-col-on-xl" > 
+
+                        <div class="pf-c-card__header"> 
+                            <h1 class="pf-c-title pf-m-lg" > Firmas Condiciones  </h1>
+                        </div>
+                        <div class="pf-c-card__body">
+                            <table wicket:id="escrituraFirmaCondicionesDataView"
+                                   class="pf-c-table pf-m-compact pf-m-grid-md pf-m-no-border-rows" >
+                                <thead>
+                                    <tr role="row" class="pf-m-wrap">
+                                        <th role="columnheader" scope="col">Codigo Tipo Condicion</th>
+                                        <th role="columnheader" scope="col">Secuencial Condicion</th>
+
+                                        <th role="columnheader" scope="col">Fijo/Variable</th> 
+                                        <th role="columnheader" scope="col">No. Firmas</th>
+                                        <th role="columnheader" scope="col">Valor Inicial</th>
+
+                                        <th role="columnheader" scope="col">Valor Final</th>
+                                        <th role="columnheader" scope="col">Variable SN</th> 
+                                        <th role="columnheader" scope="col">Saved SN</th>
+                                        <th role="columnheader" scope="col">Modo</th> 
+                                    </tr>
+                                </thead> 
+                                <tbody role="rowgroup"> 
+                                    <tr wicket:id="listViewEscrituraFirmaCondiciones" role="row"> 
+                                        <td role="cell" wicket:id="codTipoCondicion" data-label=" "> </td>
+                                        <td role="cell" wicket:id="secuencial" data-label=" "> </td>
+                                        <td role="cell" wicket:id="fijoVariable" data-label=" "> </td> 
+
+                                        <td role="cell" wicket:id="numFirmas" data-label=" "> </td>
+                                        <td role="cell" wicket:id="valorInicial" data-label=" "> </td>
+                                        <td role="cell" wicket:id="valorFinal" data-label=" "> </td>
+                                        <td role="cell" wicket:id="variableSN" data-label=" "> </td> 
+
+                                        <td role="cell" wicket:id="savedSN" data-label=" "> </td> 
+                                        <td role="cell" wicket:id="modo" data-label=" "> </td> 
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pf-c-card__footer">
+
+                        </div>
+
+                    </div>
+
+                    <div wicket:id="seccionCondicionTipo" class="pf-c-card pf-l-grid__item pf-m-4-col-on-sm pf-m-5-col-on-lg pf-m-5-col-on-xl" > 
+
+                        <div class="pf-c-card__header"> 
+                            <h1 class="pf-c-title pf-m-lg" >
+                                Condicion Tipo
+                            </h1>
+                        </div>
+                        <div class="pf-c-card__body">
+                            <table wicket:id="escrituraCondicionTipoDataView" class="pf-c-table pf-m-compact pf-m-grid-md pf-m-no-border-rows" >
+                                <thead>
+                                    <tr role="row" class="pf-m-wrap">
+                                        <th role="columnheader" scope="col">Cod Tipo Condicion</th>
+                                        <th role="columnheader" scope="col">Secuencial Condicion</th>
+                                        <th role="columnheader" scope="col">Tipo</th> 
+                                        <th role="columnheader" scope="col">Numero Firmas</th> 
+                                    </tr>
+                                </thead> 
+                                <tbody role="rowgroup"> 
+                                    <tr wicket:id="listViewEscrituraCondicionTipo" role="row"> 
+                                        <td role="cell" wicket:id="codTipoCondicion" data-label=" "> </td>
+                                        <td role="cell" wicket:id="secuencialCondicion" data-label=" "> </td>
+                                        <td role="cell" wicket:id="tipo" data-label=" "> </td> 
+                                        <td role="cell" wicket:id="numeroFirmas" data-label=" "> </td> 
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="pf-c-card__footer">
+
+                        </div> 
+
+                    </div>
+
+                    <div wicket:id="seccionConceptoUsuarioTipo"class="pf-l-grid__item pf-m-4-col-on-sm pf-m-7-col-on-lg pf-m-7-col-on-xl" > 
+
+
+                        <div class="pf-c-card">
+                            <div class="pf-c-card__header"> 
+                                <h1 class="pf-c-title pf-m-lg" >Concepto Usuario Tipo</h1>
+                            </div>
+                            <div class="pf-c-card__body">
+                                <table wicket:id="conceptoUsuarioTipoDataView" class="pf-c-table pf-m-compact pf-m-grid-md pf-m-no-border-rows" >
+                                    <thead>
+                                        <tr role="row" class="pf-m-wrap">
+                                            <th role="columnheader" scope="col">Login Usuario</th>
+                                            <th role="columnheader" scope="col">Tipo</th>
+                                            <th role="columnheader" scope="col">Cod Tipo Condicion</th> 
+                                            <th role="columnheader" scope="col">Sec Condición</th>
+                                            <th role="columnheader" scope="col">Aplica SN</th> 
+                                        </tr>
+                                    </thead> 
+                                    <tbody role="rowgroup"> 
+                                        <tr wicket:id="listViewConceptoUsuarioTipo" role="row"> 
+                                            <td role="cell" wicket:id="loginUsuario" data-label=" "> </td>
+                                            <td role="cell" wicket:id="tipo" data-label=" "> </td>
+                                            <td role="cell" wicket:id="codTipoCondicion" data-label=" "> </td> 
+                                            <td role="cell" wicket:id="secCondicion" data-label=" "> </td>
+                                            <td role="cell" wicket:id="aplicaSN" data-label=" "> </td>  
+                                        </tr> 
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="pf-c-card__footer">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </wicket:fragment>
+
+</wicket:panel>

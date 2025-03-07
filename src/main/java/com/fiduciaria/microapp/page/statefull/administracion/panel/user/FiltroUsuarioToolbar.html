@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <form wicket:id="filtro">
+        <div class="pf-c-toolbar__group pf-m-filter-group">
+
+            <div class="pf-c-toolbar__item">
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show-on-xl">
+                    <div class="pf-c-toolbar__toggle">
+                        <button class="pf-c-button pf-m-plain" type="button" 
+                                aria-label="Show filters" aria-expanded="false" 
+                                aria-controls="-expandable-content">
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </button>
+                    </div> 
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="Filtro búsqueda" role="group">
+                            <div class="pf-c-select" >
+                                <span id="-select-name-label" hidden="">Elija uno</span>
+                                <select class="pf-c-select pf-c-form-control" wicket:id="selectTipoSolicitud"></select>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pf-c-toolbar__item">
+                        <div class="pf-c-input-group" aria-label="Filtro búsqueda" role="group">
+                            <div class="pf-c-select" >
+                                <span id="-select-name-label" hidden="">Elija uno</span>
+                                <input class="pf-c-select pf-c-form-control" type="text" wicket:id="valorColumnaFiltro" />
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="pf-c-toolbar__item">
+                        <a class="pf-c-button pf-m-plain" aria-expanded="false" wicket:id="fitrarUsuarios" >
+                            <i class="fas fa-filter" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!--div class="pf-c-toolbar__item">
+                <button aria-disabled="false" class="pf-c-button pf-m-link" 
+                        type="button" wicket:id="manejarColumnas"> Columnas </button>
+            </div-->
+        </div>
+    </form>
+</wicket:panel>

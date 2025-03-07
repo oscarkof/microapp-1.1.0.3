@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<wicket:panel>
+    <form wicket:id="filtroForm">
+        <div class="pf-c-toolbar__content">
+            <div class="pf-c-toolbar__content-section">
+                <div class="pf-c-toolbar__group pf-m-toggle-group pf-m-show"> 
+                    <div class="pf-c-toolbar__item pf-m-search-filter">
+                        <div class="pf-c-input-group" aria-label="search filter" role="group">
+
+                            <div class="pf-c-text-input-group">
+                                <div class="pf-c-text-input-group__main pf-m-icon">
+                                    <span class="pf-c-text-input-group__text">
+                                        <span class="pf-c-text-input-group__icon">
+                                            <i class="fas fa-fw fa-search"></i>
+                                        </span>
+                                        <input wicket:id="filtroNombre" class="pf-c-text-input-group__text-input"
+                                               type="text" 
+                                               placeholder="Filtrar por nombre" 
+                                               />
+                                    </span>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pf-c-toolbar__item pf-m-overflow-menu">
+                    <div  class="pf-c-overflow-menu"   >
+                        <div class="pf-c-overflow-menu__content">
+                            <div class="pf-c-overflow-menu__group pf-m-button-group">
+                                <div class="pf-c-overflow-menu__item">
+                                    <button class="pf-c-button pf-m-plain" wicket:id="submitFiltroForm"
+                                            type="button" 
+                                            aria-expanded="true"  >
+                                        <i class="fas fa-filter" aria-hidden="true"></i>
+                                    </button> 
+                                </div>
+                                <div class="pf-c-overflow-menu__item">
+                                    <button class="pf-c-button pf-m-link" wicket:id="nuevoTenant" type="button">
+                                        <i class="las la-plus"></i>  Dominio</button>
+                                </div> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div> 
+                <div class="pf-c-toolbar__item pf-m-pagination">
+                    <div
+                        class="pf-c-pagination pf-m-compact pf-m-hidden pf-m-visible-on-md"
+                        >
+                        <div
+                            class="pf-c-pagination pf-m-compact pf-m-compact pf-m-hidden pf-m-visible-on-md"
+                            >
+                            <div class="pf-c-options-menu">
+                                <button
+                                    class="pf-c-options-menu__toggle pf-m-text pf-m-plain"
+                                    type="button" 
+                                    aria-haspopup="listbox"
+                                    aria-expanded="false"
+                                    >
+                                    <span class="pf-c-options-menu__toggle-text">
+                                        <b><span wicket:id="navMostrandoDeHasta"></span></b>
+                                        &nbsp;de&nbsp;
+                                        <b><span wicket:id="navTotal"></span></b>
+                                    </span>
+                                    <div class="pf-c-options-menu__toggle-icon">
+                                        <i class="fas fa-caret-down" aria-hidden="true"></i>
+                                    </div>
+                                </button>
+                                <ul wicket:id="navSeccion" class="pf-c-options-menu__menu" 
+                                    hidden >
+                                    <li>
+                                        <button wicket:id="total5Xpag" class="pf-c-options-menu__menu-item"
+                                                type="button"
+                                                >5 por p&aacute;gina
+                                            <div wicket:id="total5XpagCheck" class="pf-c-options-menu__menu-item-icon">
+                                                <i class="fas fa-check" aria-hidden="true"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button wicket:id="total10Xpag" class="pf-c-options-menu__menu-item" type="button">
+                                            10  por p&aacute;gina 
+                                            <div wicket:id="total10XpagCheck" class="pf-c-options-menu__menu-item-icon">
+                                                <i class="fas fa-check" aria-hidden="true"></i>
+                                            </div>
+
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button wicket:id="total20Xpag" class="pf-c-options-menu__menu-item"
+                                                type="button"
+                                                >20  por p&aacute;gina
+                                            <div wicket:id="total20XpagCheck" class="pf-c-options-menu__menu-item-icon">
+                                                <i class="fas fa-check" aria-hidden="true"></i>
+                                            </div>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <nav class="pf-c-pagination__nav" aria-label="Pagination">
+                                <div class="pf-c-pagination__nav-control pf-m-prev">
+                                    <button wicket:id="paginaAnterior"
+                                            class="pf-c-button pf-m-plain"
+                                            type="button" 
+                                            aria-label="Ir a página anterior"
+                                            >
+                                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                                <div class="pf-c-pagination__nav-control pf-m-next">
+                                    <button wicket:id="paginaSiguiente"
+                                            class="pf-c-button pf-m-plain"
+                                            type="button"
+                                            aria-label="Ir a siguiente página"
+                                            >
+                                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </form>
+</wicket:panel>

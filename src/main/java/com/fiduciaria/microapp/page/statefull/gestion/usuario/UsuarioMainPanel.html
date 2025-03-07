@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<wicket:panel>
+    <div wicket:id="seccionNuevoUsuario" 
+         class="pf-c-card pf-m-rounded pf-u-pb-lg pf-u-px-md 
+         pf-u-w-100-on-sm pf-u-w-75-on-md pf-u-w-66-on-lg pf-u-w-50-on-xl">
+
+        <div class="pf-c-card__title ">  
+            <h1 class="pf-u-font-size-xl">
+                <i wicket:id="backtoUsuarios" class="fas fa-chevron-left"></i> &nbsp;&nbsp; 
+                <wicket:message key="gestion.usuario.opcion.usuario.nuevo.header.label"></wicket:message>
+            </h1>
+        </div>
+
+        <div class="pf-c-card__header ">
+            <h1 class="pf-u-font-size-2xl">
+
+            </h1>
+        </div> 
+        <div class="pf-c-card__body ">
+
+            <wicket:container wicket:id="nuevoUsuario"></wicket:container>
+
+        </div>
+    </div>
+
+    <div wicket:id="seccionUsuarios" class="pf-c-card pf-m-rounded  pf-u-pb-lg pf-u-px-md ">
+
+        <div class="pf-c-card__header ">
+            <h1 class="pf-u-font-size-2xl">
+                <wicket:message key="gestion.usuario.opcion.usuario.header.label"></wicket:message>
+            </h1>
+        </div> 
+        <div class="pf-c-card__body">
+            <wicket:message key="gestion.usuario.opcion.usuario.descripcion.body"></wicket:message>
+        </div>
+
+        <div wicket:id="toolbarSeccion" class="pf-c-toolbar" id="toolbar-group-types-example">
+            <div class="pf-c-toolbar__content">
+                <div class="pf-c-toolbar__content-section">
+
+                    <div class="pf-c-toolbar__group pf-m-button-group">
+                        <div class="pf-c-toolbar__item">
+                            <button class="pf-c-button pf-m-primary" 
+                                    wicket:id="nuevoUsuarioBtn"
+                                    type="button">Nuevo usuario</button>
+                        </div>
+                        <div class="pf-c-toolbar__item">
+                            <button wicket:id="enrolarUsuariosOtp"
+                                    class="pf-c-button pf-m-secondary" 
+                                    type="button">Enrolar Usuarios OTP</button>
+                        </div>
+                        <div class="pf-c-toolbar__item">
+                            <button  wicket:id="bloquearUsuarios"
+                                     class="pf-c-button pf-m-tertiary" 
+                                     type="button">Bloquear Usuarios</button>
+                        </div>
+                        <div class="pf-c-toolbar__item" wicket:id="desbloquearUsuarios"> 
+                            <button class="pf-c-button pf-m-tertiary" type="button">Desbloquear Usuarios</button>
+                        </div>
+                    </div>
+
+                    <div class="pf-c-toolbar__item pf-m-pagination">
+                        <div class="pf-c-pagination" aria-label=" ">
+
+                            <nav class="pf-c-pagination__nav" aria-label="Paginacion">
+                                <div wicket:id="navigation"></div>
+                            </nav>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div wicket:id="filtroToolbar" class="pf-c-toolbar"> 
+            <div class="pf-c-toolbar__content">
+                <div class="pf-c-toolbar__content-section">
+                    <div class="pf-c-toolbar__group"> 
+                        <div class="pf-c-toolbar__item pf-m-search-filter">
+                            <div class="pf-c-input-group" aria-label="search filter" role="group">
+                                <select wicket:id="opcionesFiltro" class="pf-c-form-control pf-c-select" style="width: 275px">
+
+                                </select>
+                                <div class="pf-c-text-input-group">
+                                    <div class="pf-c-text-input-group__main pf-m-icon">
+                                        <span class="pf-c-text-input-group__text">
+                                            <span class="pf-c-text-input-group__icon">
+                                                <i class="fas fa-fw fa-search"></i>
+                                            </span>
+                                            <input
+                                                class="pf-c-text-input-group__text-input"
+                                                type="text"
+                                                wicket:id="valorFiltroUsuario"
+                                                value
+                                                placeholder="Filtrar por"
+                                                aria-label="Tipo Para Filtrar"
+                                                />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pf-c-toolbar__item pf-m-overflow-menu">
+                            <div class="pf-c-overflow-menu">
+                                <div class="pf-c-overflow-menu__content">
+                                    <div class="pf-c-overflow-menu__group pf-m-button-group">
+                                        <div class="pf-c-overflow-menu__item">
+                                            <a class="pf-c-button pf-m-primary" 
+                                               wicket:id="filtrarUsuarios"
+                                               >
+                                                Filtrar <i class="fas fa-filter"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div wicket:id="fragmentActionSection">
+
+        </div>
+
+        <form wicket:id="formUsuarios">
+            <span wicket:id="chekUsrGroup">
+                <table  class="pf-c-table pf-m-grid-md pf-m-compact"  role="grid"  aria-label="Tabla de usuarios"  >
+                    <thead>
+                        <tr role="row">
+                            <td class="pf-c-table__check" role="cell"> 
+                            </td>
+                            <th role="columnheader" scope="col">Usuario</th>
+                            <th role="columnheader" scope="col">Descripci&oacute;n</th> 
+                            <th role="columnheader" scope="col">Email</th>
+                            <th role="columnheader" scope="col">Estado</th>
+                            <td></td>
+                        </tr>
+                    </thead>
+
+                    <tfoot>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>
+                                Exportar usuarios a &nbsp;&nbsp; <a href="#" wicket:id="downloadLink" > Excel</a>
+                            </td>
+                        </tr>
+                    </tfoot>
+
+                    <tbody role="rowgroup">
+                        <tr wicket:id="listaUsuarios" role="row">
+                            <td class="pf-c-table__check" role="cell">
+                                <label>
+                                    <input type="checkbox" wicket:id="checkUser" 
+                                           aria-labelledby=""
+                                           />
+                                </label>
+                            </td>
+                            <td role="cell" data-label="Usuario">
+                                <span wicket:id="usuario"></span>
+                            </td>
+                            <td role="cell" data-label="Descripcion">
+                                <span wicket:id="primerNombre"></span>
+                            </td>
+
+                            <td role="cell" data-label="Correo Electrónico">
+                                <span wicket:id="email"></span>
+                            </td>
+                            <td role="cell" data-label="Correo Electrónico">
+
+                                <span wicket:id="estadoLabel" class="pf-c-label pf-m-red pf-m-outline">
+                                    <span wicket:id="estado" class="pf-c-label__content">Red</span>
+                                </span>
+
+                            </td>
+                            <td class="pf-c-table__action" role="cell">
+                                <div class="pf-c-overflow-menu" >
+                                    <div class="pf-c-overflow-menu__control">
+                                        <div class="pf-c-dropdown pf-m-expanded">
+                                            <button class="pf-c-button pf-c-dropdown__toggle pf-m-plain"
+                                                    type="button" >
+                                                <i class="fas fa-ellipsis-v" aria-hidden="true"></i>
+                                            </button>
+
+                                            <ul   class="pf-c-dropdown__menu pf-m-align-right" hidden="" >
+                                                <li>
+                                                    <a wicket:id="bloquear" class="pf-c-dropdown__menu-item">Bloquear</a>
+                                                </li>
+                                                <li>
+                                                    <a wicket:id="desbloquear" class="pf-c-dropdown__menu-item">Desbloquear</a>
+                                                </li>
+                                                <li>
+                                                    <a wicket:id="enrolarOTP" class="pf-c-dropdown__menu-item">Enrolar OTP</a>
+                                                </li>
+                                                <li>
+                                                    <a wicket:id="restablecerPass" class="pf-c-dropdown__menu-item">Restablecer contraseña</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </span>
+        </form>
+    </div>
+
+    <wicket:fragment wicket:id="enrolarUsuariosOtpFragment">
+
+        <div class="pf-c-content">
+            <h2>Vas a enrolar los siguientes usuarios en el segundo factor de autenticación (OTP).</h2>
+            <p></p>
+        </div>
+
+        <div class="pf-l-gallery pf-m-gutter">
+
+            <div class="pf-c-card pf-u-text- align-center" wicket:id="usuarioToOTPView">
+                <div class="pf-c-card__title">
+                    <span wicket:id="loginUsuario"></span>
+                </div>  
+                <div class="pf-c-card__body">
+                    <i
+                        class="fas fa-check-circle pf-u-success-color-100"
+                        aria-hidden="true"
+                        ></i> <span wicket:id="descripcionUsuario"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="pf-c-content">
+            <p></p>
+            <p>Para continuar con la acción dar click en el botón Confirmar de lo contrario en Cancelar  </p>
+            <p></p>
+        </div>
+        <a wicket:id="confirmar" class="pf-c-button pf-m-primary" >
+            Confirmar
+        </a>  
+        <a wicket:id="cancelar"  class="pf-c-button pf-m-danger">
+            Cancelar
+        </a>
+
+    </wicket:fragment>
+    <wicket:fragment wicket:id="bloquearUsuariosFragment">
+
+        <div class="pf-c-content">
+            <h2 class="pf-u-danger-color-200"> 
+                Vas a BLOQUEAR los siguientes usuarios.</h2>
+            <p></p>
+        </div>
+
+        <div class="pf-l-gallery pf-m-gutter">
+
+            <div class="pf-c-card pf-u-text- align-center" wicket:id="usuarioToOTPView">
+                <div class="pf-c-card__title">
+                    <span wicket:id="loginUsuario"></span>
+                </div>  
+                <div class="pf-c-card__body">
+                    <i
+                        class="fas fa-check-circle pf-u-success-color-100"
+                        aria-hidden="true"
+                        ></i> <span wicket:id="descripcionUsuario"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="pf-c-content">
+            <p></p>
+            <p>Para continuar con la acción dar click en el botón Confirmar, de lo contrario en Cancelar  </p>
+            <p></p>
+        </div>
+        <a wicket:id="confirmar" class="pf-c-button pf-m-primary" >
+            Confirmar
+        </a>  
+        <a wicket:id="cancelar"  class="pf-c-button pf-m-danger">
+            Cancelar
+        </a>
+
+    </wicket:fragment>
+    <wicket:fragment wicket:id="desbloquearUsuariosFragment"> 
+
+        <div class="pf-c-content">
+            <p></p>
+            <h2 class="pf-u-info-color-200"> 
+                Vas a desbloquear los siguientes usuarios.</h2>
+            <p></p>
+        </div>
+
+        <div class="pf-l-gallery pf-m-gutter">
+
+            <div class="pf-c-card pf-u-text- align-center" wicket:id="usuarioToOTPView">
+                <div class="pf-c-card__title">
+                    <span wicket:id="loginUsuario"></span>
+                </div>  
+                <div class="pf-c-card__body">
+                    <i
+                        class="fas fa-check-circle pf-u-success-color-100"
+                        aria-hidden="true"
+                        ></i> <span wicket:id="descripcionUsuario"></span>
+                </div>
+            </div>
+
+        </div>
+        <div class="pf-c-content">
+            <p></p>
+            <p>Para continuar con la acción dar click en el botón Confirmar, de lo contrario en Cancelar  </p>
+            <p></p>
+        </div>
+        <a wicket:id="confirmar" class="pf-c-button pf-m-primary" >
+            Confirmar
+        </a>  
+        <a wicket:id="cancelar"  class="pf-c-button pf-m-danger">
+            Cancelar
+        </a>
+
+
+    </wicket:fragment>
+
+</wicket:panel>
+

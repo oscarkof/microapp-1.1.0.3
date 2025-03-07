@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <li wicket:id = "tarea" 
+        class="pf-c-data-list__item pf-m-expanded"
+        aria-labelledby="">
+        <div class="pf-c-data-list__item-row">
+            <div class="pf-c-data-list__item-content">
+                <div class="pf-c-data-list__cell pf-m-align-left" style="max-width: 200px;">
+                    <div class="pf-l-flex pf-m-column pf-m-space-items-md">
+                        <div class="pf-l-flex pf-m-column pf-m-space-items-none">
+                            <div class="pf-l-flex__item">
+                                <p >
+
+                                <wicket:container wicket:id="nombreTarea"/>
+
+                                </p>
+                            </div> 
+
+                            <div class="pf-l-flex__item">
+                                <span wicket:id="estadoTarea" >
+                                    <span class="pf-c-label__content">
+                                        <span class="pf-c-label__icon">
+                                            <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                                        </span>
+                                        <wicket:container wicket:id="estadoTareaLabel" /> 
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="pf-l-flex pf-m-wrap"> 
+                            <div class="pf-l-flex pf-m-space-items-xs">
+                                <div class="pf-l-flex__item">
+
+                                </div> 
+
+                            </div> 
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pf-c-data-list__cell">
+                    <div >
+                        <b>
+                            <wicket:container wicket:id="codigoNegocio"/>
+                            &nbsp;&nbsp;
+                            <wicket:container wicket:id="negocio"/>
+                        </b>
+                    </div>
+                    <span>
+                        <small>
+                            Radicado número &nbsp;&nbsp; <b><wicket:container wicket:id="numeroRadicado"/> </b>
+                            <!--br>Fecha solicitud&nbsp;&nbsp; <b><wicket:container wicket:id="fechaRadicado"/> </b-->
+                        </small>
+                    </span>
+
+                </div>
+                <div class="pf-c-data-list__cell">
+                    <span>
+
+                        Asignado por &nbsp;&nbsp; 
+                        <span wicket:id="usuarioCreaTarea"></span>
+                        &nbsp;&nbsp; en fecha &nbsp;&nbsp; 
+                        <span wicket:id="fechaCreacionTarea"></span>
+
+                    </span>
+                    <span>
+                        <p>
+                            <span wicket:id="descripcionTarea"></span>
+
+                        </p>
+                    </span>
+                </div>
+
+
+                <div class="pf-c-data-list__cell pf-m-align-right pf-m-no-fill">
+                    <button  class="pf-c-button pf-m-link pf-u-font-size-xl" type="button">
+                        <i class="fas fa-angle-right" 
+                           aria-hidden="true"></i>
+                    </button> 
+                </div>
+            </div>
+        </div> 
+    </li>
+
+
+</wicket:panel>

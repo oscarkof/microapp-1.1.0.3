@@ -1,0 +1,114 @@
+<wicket:head>
+    <style>
+        .pf-c-page__main{
+            margin-top:44px !important; 
+        }
+        .pf-c-page{
+            background-color: white !important;
+        }
+        .toggleNavBar{
+            --pf-c-page__sidebar--BackgroundColor: #1F497D;
+            position: absolute;
+            z-index: 300;
+            left: 0px;
+            font-size: 24px;
+            padding: 10px 0px;
+            border-radius: 0 1px 6px 0;
+            color: white;
+            background-color: var(--pf-c-page__sidebar--BackgroundColor);
+            transition: var(--pf-c-page__sidebar--Transition); 
+            box-shadow: 1px 1px 1px 0 #000;
+        }
+
+        .toggleNavBar > i {
+            rotate: 0deg;
+        }
+
+        .toggleNavBar.toggleNavBar-expanded{
+
+            left: 290px; 
+
+        }
+
+        .toggleNavBar.toggleNavBar-expanded > i {
+
+            rotate: 180deg;
+        }
+
+        @media screen and (min-width: 1200px){ 
+
+            .pf-c-page__main{
+                margin-top:0px !important; 
+            }
+
+        }
+
+        .pf-c-scroll-outer-wrapper {
+            --pf-c-scroll-outer-wrapper--MinHeight: 25rem;
+            --pf-c-scroll-outer-wrapper--MaxHeight: 100%;
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            min-height: var(--pf-c-scroll-outer-wrapper--MinHeight);
+            max-height: var(--pf-c-scroll-outer-wrapper--MaxHeight);
+            overflow: hidden;
+        }
+
+        .pf-c-scroll-inner-wrapper {
+            display: flex;
+            flex-direction: column;
+            max-width: 100%;
+            max-height: 100%;
+            overflow: auto;
+        }
+        #root{
+            height: 100vh !important;
+        }
+    </style>
+</wicket:head>
+<wicket:extend>  
+    <div id="root">
+        <div class=" pf-u-h-100">
+
+            <div class="pf-c-page ">  
+                <div wicket:id="toggleNavbar" class="pf-u-display-inline-flex toggleNavBar"  ><i class="las la-angle-double-left"></i></div>
+                <div wicket:id="sidebar" class="pf-c-page__sidebar pf-m-expanded"
+                     style="--pf-c-page__sidebar--BackgroundColor: #1F497D;
+                     box-shadow: 2px 0 6px 0 #000; 
+                     "> 
+                    <div class="pf-c-page__sidebar-body">
+                        <nav wicket:id="navContainer" class="pf-c-nav" 
+
+                             aria-label="Global">
+                            <ul class="pf-c-nav__list"> 
+                                <wicket:container wicket:id="navMenus">
+                                    <li class="pf-c-nav__item">
+                                        <a wicket:id="navOption" class="pf-c-nav__link"  >
+                                            <span wicket:id="label"></span>
+                                        </a>
+                                    </li>
+                                </wicket:container> 
+                            </ul>
+                        </nav>
+
+                    </div>
+                </div>
+                <main class="pf-c-page__main" tabindex="-1"> 
+                    <section class="pf-c-page__main-section pf-m-light">
+
+                        <wicket:child /> 
+
+                    </section>
+                </main>
+            </div>
+
+            <div wicket:id="modalRoot" class="pf-c-backdrop"> 
+                <div class="pf-l-bullseye">
+                    <wicket:container wicket:id="modalContent"></wicket:container>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</wicket:extend>

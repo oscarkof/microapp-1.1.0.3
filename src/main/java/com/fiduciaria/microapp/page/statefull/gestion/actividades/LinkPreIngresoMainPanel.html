@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <div wicket:id="seccionFiltro" class="pf-c-card pf-m- plain pf-m-rounded pf-l-grid__item pf-m-12-col-on-sm 
+         pf-m-3-col-on-lg pf-m-3-col-on-xl" >
+
+        <div class="pf-c-card pf-m-plain pf-m-rounded">
+            <div class="pf-c-card__header pf-u-font-size-xl pf-u-py-sm">
+                <wicket:message key="gestion.actividades.filtro.negocio.header.label" />
+            </div>
+
+            <div class="pf-c-form pf-c-card__body pf-u-pb-xs" >
+
+                <a wicket:id="crearCorreo" class="pf-c-button pf-m-primary">
+                    <wicket:message key="gestion.actividades.filtro.boton.crear.linkseguro"></wicket:message> 
+                    &nbsp;&nbsp;<i class="fas fa-lock"></i>
+                </a>
+
+            </div>
+
+            <div wicket:id="filterInputsPane" class="pf-c-form pf-c-card__body">
+                <form wicket:id="form"> 
+                    <select wicket:id="tipoNegocio" ></select> 
+
+                </form> 
+            </div> 
+        </div>
+        <div wicket:id="detalleNegocio" class="pf-c-card pf-m-plain pf-m-rounded" >
+            <div class="pf-c-card__title">
+                <wicket:message key="gestion.actividades.filtro.negocio.descripcion.title.label"/>
+            </div>
+            <div wicket:id="detalleReferenciaUnica" class="pf-c-card__body">
+
+                <dl class="pf-c-description-list">
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term"> 
+                        <wicket:message key="gestion.actividades.filtro.negocio.numeroreferencia.label"></wicket:message>
+                        </dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="numeroReferencia" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Descripci&oacute;n</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text" >
+                                <span wicket:id="descripcionReferencia" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Tipo Id.</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="tipoIdentificacion" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Identificaci&oacute;n</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="identificacion" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Dig. Ver.</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="digitosVerificacion" ></span>
+                            </div>
+                        </dd>
+                    </div>
+
+                </dl>
+
+
+            </div> 
+            <div wicket:id="detalleFideicomiso" class="pf-c-card__body">
+
+                <dl class="pf-c-description-list">
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Tipo</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="tipo" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Subtipo</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text" >
+                                <span wicket:id="subtipo" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Código</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="codigo" ></span>
+                            </div>
+                        </dd>
+                    </div>
+                    <div class="pf-c-description-list__group">
+                        <dt class="pf-c-description-list__term">Nombre</dt>
+                        <dd class="pf-c-description-list__description">
+                            <div class="pf-c-description-list__text">
+                                <span wicket:id="nombreNegocio" ></span>
+                            </div>
+                        </dd>
+                    </div>
+
+                </dl>
+
+            </div>
+            <div class="pf-c-card__footer">
+
+            </div>
+        </div>  
+    </div>
+    <div wicket:id="seccionAccion" class="pf-c-card pf-m -plain pf-m-rounded pf-l-grid__item pf-m-12-col-on-sm 
+         pf-m-12-col-on-md
+         pf-m-9-col-on-lg pf-m-8-col-on-xl">
+        <div class="pf-c-toolbar" wicket:id="toolbarFiltro"> 
+            <form wicket:id="filtroForm">
+                <div class="pf-c-toolbar__content">
+                    <div class="pf-c-toolbar__content-section">
+                        <div class="pf-c-toolbar__item"> 
+
+                            <div class="pf-c-input-group" aria-label="Filtro busqueda" role="group">
+
+                                <div class="pf-c-text-input-group">
+                                    <div class="pf-c-text-input-group__main pf-m-icon">
+                                        <span class="pf-c-text-input-group__text">
+                                            <span class="pf-c-text-input-group__icon">
+                                                <i class="fas fa-fw fa-search"></i>
+                                            </span>
+                                            <input wicket:id="filtroCodigo"
+                                                   class="pf-c-text-input-group__text-input"
+                                                   type="text" 
+                                                   placeholder="Filtrar por códido o número"
+                                                   aria-label=" " />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pf-c-toolbar__item">
+
+                            <div class="pf-c-input-group" aria-label="" role="group">
+
+                                <div class="pf-c-text-input-group">
+                                    <div class="pf-c-text-input-group__main pf-m-icon">
+                                        <span class="pf-c-text-input-group__text">
+                                            <span class="pf-c-text-input-group__icon">
+                                                <i class="fas fa-fw fa-search"></i>
+                                            </span>
+                                            <input wicket:id="filtroNombre" 
+                                                   class="pf-c-text-input-group__text-input"
+                                                   type="text" 
+                                                   placeholder="Filtrar por nombre"
+                                                   aria-label=" "  />
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="pf-c-toolbar__item"> 
+                            <a wicket:id="filtroLink" 
+                               class="pf-c-button pf-m-plain"
+                               type="button"
+                               aria-label="Mostrar filtros"
+                               aria-expanded="false"
+                               aria-controls=" "  >
+                                <i class="fas fa-filter" aria-hidden="true"></i>
+                            </a>
+                        </div> 
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <wicket:container wicket:id="fragmentPanel"></wicket:container>
+    </div>
+
+
+    <wicket:fragment wicket:id="correoLinkSeguroFragment">
+
+        <div class="pf-c-card__header pf-u-font-size-xl">
+            <wicket:message key="gestion.actividades.notificacion.header.label" /> 
+        </div>
+        <div class="pf-c-card__body">
+
+            <div class="pf-c-alert pf-m-info" wicket:id="alerta" aria-label="Information alert">
+                <div class="pf-c-alert__icon">
+                    <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+                </div>
+                <p class="pf-c-alert__title">
+                    <span class="pf-screen-reader">Info alert:</span>
+                    <span wicket:id="mensajeAlerta"></span>
+                </p>
+            </div>
+
+            <form class="pf-c-form" wicket:id="formCorreo" novalidate style="--pf-c-form--GridGap: 0.3rem;">
+
+                <input type="text" wicket:id="correoDestino"/>
+                <input type="text" wicket:id="asuntoTpl"/>
+                <textarea wicket:id="cuerpoCorreoTpl" class="pf-m-plain pf-m-resize-vertical" rows="7" ></textarea>
+                <div class=" pf-m-action">
+                    <div class="pf-c-form__actions">
+                        <a class="pf-c-button pf-m-primary" wicket:id="submitLink" >Enviar</a>
+                        <button class="pf-c-button pf-m-secondary pf-m-danger pf-m-link" type="reset">Cancelar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </wicket:fragment>
+
+    <wicket:fragment wicket:id="seleccionNegocioFragment">
+        <wicket:container wicket:id="vistaNegocio"></wicket:container>
+    </wicket:fragment>
+
+</wicket:panel>

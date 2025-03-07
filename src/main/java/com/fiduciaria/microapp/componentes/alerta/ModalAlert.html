@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <div role="dialog" class="pf-c-modal-box pf-m-sm"> 
+        <div class="pf-c-alert pf-m-info  pf-u-box-shadow-sm" wicket:id="infoAlert" aria-label="Alerta informativa">
+            <div class="pf-c-alert__icon">
+                <i class="fas fa-fw fa-info-circle" aria-hidden="true"></i>
+            </div>
+            <p class="pf-c-alert__title">
+                <span class="pf-screen-reader">Info alert:</span>
+                Informaci&oacute;n importante
+            </p>
+            <div class="pf-c-alert__description">
+                <p wicket:id="infolistview"> <span wicket:id="msg"></span></p>
+            </div>
+        </div>
+        <div class="pf-c-alert pf-m-success  pf-u-box-shadow-sm" wicket:id="successAlert" aria-label="Alerta de exito">
+            <div class="pf-c-alert__icon">
+                <i class="fas fa-fw fa-check-circle" aria-hidden="true"></i>
+            </div>
+            <p class="pf-c-alert__title">
+                <span class="pf-screen-reader">Success alert:</span>
+                Completado Exitoso
+            </p>
+            <div class="pf-c-alert__description"> 
+                <p wicket:id="successlistview"> <span wicket:id="msg"></span></p>
+            </div>
+        </div>
+        <div class="pf-c-alert pf-m-danger  pf-u-box-shadow-sm" wicket:id="dangerAlert" aria-label="Alerta de error">
+            <div class="pf-c-alert__icon">
+                <i class="fas fa-fw fa-exclamation-circle" aria-hidden="true"></i>
+            </div>
+            <p class="pf-c-alert__title">
+                <span class="pf-screen-reader">Danger alert:</span>
+                Fall&oacute; su ejecuci&oacute;n
+            </p>
+            <div class="pf-c-alert__description">
+                <p  wicket:id="dangerlistview"> <span wicket:id="msg"></span> </p>
+            </div>
+        </div> 
+
+        <footer class="pf-c-modal-box__footer pf-u-py-sm"> 
+            <button class="pf-c-button pf-m-primary" 
+                    wicket:id="cerrarBtn" type="button"> Cerrar </button> 
+        </footer>
+
+    </div>
+</wicket:panel>

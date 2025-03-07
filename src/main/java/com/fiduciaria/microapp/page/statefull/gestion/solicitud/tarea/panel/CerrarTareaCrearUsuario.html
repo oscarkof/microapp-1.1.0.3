@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<wicket:panel>
+
+    <div wicket:id="detalleTareaPanel" class="pf-c-card">
+        <div class="pf-c-card__header">
+            <div class="pf-c-card__actions pf-m-no-offset">
+                <button wicket:id="cerrarModal" class="pf-c-button pf-m-plain" 
+                        type="button" aria-label="Cerrar">
+                    <i class="fas fa-times" aria-hidden="true"></i> 
+                </button>
+            </div>
+            <h1 class="pf-c-title pf-m-lg"  >
+                <span wicket:id="tituloTarea"></span> 
+            </h1>
+        </div>
+        <div class="pf-c-card__body">
+
+            <ul class="pf-c-data-list pf-m-grid-lg pf-m-compact"
+                role="list" aria-label="Información para crear usuario"   >
+                <li  class="pf-c-data-list__item"   >
+                    <div class="pf-c-data-list__item-row">
+                        <div class="pf-c-data-list__item-content"> 
+                            <div class="pf-l-grid pf-m-all-6-col-on-sm 
+                                 pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl" >
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Negocio</strong>&nbsp;&nbsp;
+                                    <span wicket:id="codigoNegocio"></span> - 
+                                    <span wicket:id="nombreNegocio"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Tipo Solicitud</strong>&nbsp;&nbsp;
+                                    <span wicket:id="tipoSolicitud"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Primer Nombre</strong>&nbsp;&nbsp;  
+                                    <span wicket:id="primerNombre" ></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Segundo Nombre</strong>&nbsp;&nbsp;
+                                    <span wicket:id="segundoNombre" ></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Primer Apellido</strong>&nbsp;&nbsp;
+                                    <span wicket:id="primerApellido"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Segundo Apellido</strong>&nbsp;&nbsp;
+                                    <span wicket:id="segundoApellido"></span>
+                                </div> 
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Celular </strong>&nbsp;&nbsp;
+                                    <span wicket:id="numeroCelular"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Direcci&oacute;n </strong>&nbsp;&nbsp;
+                                    <span wicket:id="direccionSolicita"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Direcci&oacute;n correo </strong>&nbsp;&nbsp; 
+                                    <span wicket:id="correoSolicita"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Rol </strong>&nbsp;&nbsp;
+                                    <span wicket:id="rol"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Rol Fideicomiso </strong>&nbsp;&nbsp;
+                                    <span wicket:id="rolFideicomiso"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Rol Fideicomiso - Otro </strong>&nbsp;&nbsp;
+                                    <span wicket:id="rolFideicomisoOtro"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-3-col-on-lg pf-m-3-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Condiciones Manejo</strong>&nbsp;&nbsp;
+                                    <span wicket:id="condiManejo"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-6-col-on-lg pf-m-6-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Condiciones Manejo Otro</strong>&nbsp;&nbsp; 
+                                    <span wicket:id="condiManejoRolcargaOtra"></span>
+                                </div>
+
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-12-col-on-lg pf-m-12-col-on-xl
+                                     pf-u-px-sm "  >
+                                    <strong>Condiciones de los usuarios autorizadores 
+                                        de las operaciones en la plataforma</strong>&nbsp;&nbsp;
+                                    <span wicket:id="conUsrAuthz"></span>
+                                </div>
+                                <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-12-col-on-lg pf-m-12-col-on-xl
+                                     pf-u-px-sm "  > 
+                                    <ul class="pf-c-list pf-m-inline">
+                                        <li wicket:id="adjuntos"> 
+                                            <a wicket:id="descarga"> 
+                                                <span wicket:id="nombre"></span>
+                                            </a> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li> 
+            </ul> 
+        </div>
+        <div class="pf-c-card__body"> 
+            <form class=" pf-c-form " novalidate wicket:id="actualizaTareaForm"> 
+                <div class="pf-l-grid pf-m-gutter pf-m-all-6-col-on-sm
+                     pf-m-all-4-col-on-md pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl">
+
+                    <div class="pf-l-grid__item pf-m-12-col-on-sm 
+                         pf-m-6-col-on-lg pf-m-6-col-on-xl" >
+
+                        <div class="pf-l-grid pf-m-gutter pf-m-all-12-col-on-sm pf-m-all-6-col-on-md 
+                             pf-m-all-3-col-on-lg pf-m-all-3-col-on-xl">
+                            <button wicket:id="crearUsuario" type="button"
+                                    class="pf-c-button pf-m-link "
+                                    >Crear usuario <i class="fas fa-check "></i> </button>
+                            <!--button  class="pf-c-button pf-m-link " type="button"
+                                     wicket:id="agregarCondicionesNegocio" >
+                                Condiciones Negocio <i class="fas fa-check "></i> </button-->
+                        </div> 
+                        <select wicket:id="listaEstadoTarea" class="pf-c-form-control"> </select> 
+
+                        <textarea wicket:id="observacionTarea" rows="3"
+                                  class="pf-c-form-control pf-m-resize-vertical" > 
+                        </textarea>
+                    </div>  
+
+                </div> 
+            </form>
+        </div>
+
+        <div class="pf-c-card__footer">
+
+            <footer class="pf-c-modal-box__footer">
+                <button wicket:id ="guardarTarea" class="pf-c-button pf-m-primary" type="button">Guardar</button>
+                <button wicket:id="cancelarBtn" class="pf-c-button pf-m-link" type="button">Cancelar</button>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <div wicket:id="fragmentPanel"> 
+        <div wicket:id="content"></div>
+    </div>
+ 
+    <wicket:fragment wicket:id="fragmentoStepper">
+        <ol class="pf-c-progress-stepper pf-m-vertical-on-lg pf-m-horizontal-on-2xl">
+            <li
+                class="pf-c-progress-stepper__step pf-m-success"
+                aria-label="completed step,"
+                >
+                <div class="pf-c-progress-stepper__step-connector">
+                    <span class="pf-c-progress-stepper__step-icon">
+                        <i class="fas fa-check-circle" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="pf-c-progress-stepper__step-main">
+                    <div class="pf-c-progress-stepper__step-title">First step</div>
+                    <div
+                        class="pf-c-progress-stepper__step-description"
+                        >This is the first thing to happen</div>
+                </div>
+            </li>
+            <li
+                class="pf-c-progress-stepper__step pf-m-current pf-m-info"
+                aria-label="current step,in process step,"
+                >
+                <div class="pf-c-progress-stepper__step-connector">
+                    <span class="pf-c-progress-stepper__step-icon">
+                        <i class="pficon pf-icon-resources-full" aria-hidden="true"></i>
+                    </span>
+                </div>
+                <div class="pf-c-progress-stepper__step-main">
+                    <div class="pf-c-progress-stepper__step-title">Second step</div>
+                    <div
+                        class="pf-c-progress-stepper__step-description"
+                        >This is the second thing to happen</div>
+                </div>
+            </li>
+            <li
+                class="pf-c-progress-stepper__step pf-m-pending"
+                aria-label="pending step,"
+                >
+                <div class="pf-c-progress-stepper__step-connector">
+                    <span class="pf-c-progress-stepper__step-icon"></span>
+                </div>
+                <div class="pf-c-progress-stepper__step-main">
+                    <div class="pf-c-progress-stepper__step-title">Third step</div>
+                    <div
+                        class="pf-c-progress-stepper__step-description"
+                        >This is the last thing to happen</div>
+                </div>
+            </li>
+        </ol>
+    </wicket:fragment>
+
+    <wicket:fragment wicket:id="fragmentoCrearUsuario">
+
+        <div class="pf-l-grid pf-m-all-6-col-on-sm pf-m-all-4-col-on-md 
+             pf-m-all-2-col-on-lg pf-m-all-1-col-on-xl">
+            <div class="pf-l-grid__item pf-m-12-col-on-sm 
+                 pf-m-8-col-on-lg pf-m-7-col-on-xl">  
+                <div class="pf-c-card"> 
+                    <div class="pf-c-card__header">
+                        <div class="pf-c-card__actions pf-m-no-offset">
+                            <div wicket:id="cerrar"><i class="fas fa-times"></i> </div>
+                        </div>
+                        <h1 class="pf-c-title pf-m-lg" >Crear usario de la solicitud</h1>
+                    </div>
+                    <div class="pf-c-card__body">
+                        <div wicket:id="formularioUsuario"></div>
+                    </div>
+                </div> 
+            </div>
+            <div class="pf-l-grid__item pf-m-12-col-on-sm pf-m-6-col-on-lg pf-m-7-col-on-xl" > 
+            </div> 
+        </div>
+
+    </wicket:fragment>
+
+
+</wicket:panel>
